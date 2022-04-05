@@ -36,7 +36,6 @@ extension MainRocketViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as? DescriptionTableViewCell else { return UITableViewCell()}
         cell.configure(textCell: arrayTestDecs[indexPath.row])
-        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
@@ -49,22 +48,9 @@ extension MainRocketViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfoRocketCollectionViewCell", for: indexPath) as? InfoRocketCollectionViewCell else { return InfoRocketCollectionViewCell()}
-        cell.configure(textCell: arrayTestInfo[indexPath.row])
-        //cell.accessoryType = .disclosureIndicator
+        cell.configure(textCell: arrayTestInfo[indexPath.item])
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return arrayTestDecs.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as? DescriptionTableViewCell else { return UITableViewCell()}
-//        cell.configure(textCell: arrayTestDecs[indexPath.row])
-//        cell.accessoryType = .disclosureIndicator
-//        return cell
-//    }
-    
 }
 
 

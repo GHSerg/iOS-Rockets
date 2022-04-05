@@ -6,7 +6,6 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1168"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SjG-3Q-Smq">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjG-3Q-Smq">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1168"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlK-kJ-9Sq" userLabel="FotoView">
@@ -40,7 +39,7 @@
                                         <rect key="frame" x="0.0" y="248" width="414" height="112"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2a-ga-2IK" userLabel="NameSettingsStackViewH">
-                                                <rect key="frame" x="32" y="31" width="350" height="50"/>
+                                                <rect key="frame" x="32" y="31" width="350.5" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Falcon Heavy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6V-3z-qyp" userLabel="NameRocketLabel">
                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
@@ -52,10 +51,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="DaE-ks-D61" userLabel="SpacerView">
-                                                        <rect key="frame" x="150" y="0.0" width="136.5" height="50"/>
+                                                        <rect key="frame" x="150" y="0.0" width="137" height="50"/>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40o-TE-1DL" userLabel="SettingsRocketButton">
-                                                        <rect key="frame" x="286.5" y="0.0" width="63.5" height="50"/>
+                                                        <rect key="frame" x="287" y="0.0" width="63.5" height="50"/>
                                                         <color key="tintColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="">
@@ -68,64 +67,68 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="v2a-ga-2IK" secondAttribute="trailing" constant="32" id="73J-f8-ucp"/>
-                                            <constraint firstItem="v2a-ga-2IK" firstAttribute="centerY" secondItem="ieV-0g-PoU" secondAttribute="centerY" id="iKV-cO-LKf"/>
-                                            <constraint firstItem="v2a-ga-2IK" firstAttribute="leading" secondItem="ieV-0g-PoU" secondAttribute="leading" constant="32" id="lLe-l3-IMw"/>
+                                            <constraint firstAttribute="trailing" secondItem="v2a-ga-2IK" secondAttribute="trailing" constant="31.5" id="JzJ-SJ-ha8"/>
+                                            <constraint firstItem="v2a-ga-2IK" firstAttribute="centerY" secondItem="ieV-0g-PoU" secondAttribute="centerY" id="UR1-mW-KmZ"/>
                                             <constraint firstAttribute="height" constant="112" id="sZU-jK-NnH"/>
+                                            <constraint firstItem="v2a-ga-2IK" firstAttribute="leading" secondItem="ieV-0g-PoU" secondAttribute="leading" constant="32" id="tbF-Tu-HPX"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQm-Bz-eLf" userLabel="InfoRocketView">
                                         <rect key="frame" x="0.0" y="360" width="414" height="96"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1mk-cL-CLn" userLabel="InfoRocketCollectionView">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qpK-FU-BHt" userLabel="InfoCollectionView">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dlj-xW-xdy" userLabel="InfoRocketCollectionViewFlowLayout">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="12" minimumInteritemSpacing="12" id="0ws-tB-WAD">
                                                     <size key="itemSize" width="96" height="96"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="InfoRocketCollectionViewCell" id="Vce-Gm-JG4" userLabel="InfoRocketCollectionViewCell" customClass="InfoRocketCollectionViewCell" customModule="Rocket_iOS" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InfoRocketCollectionViewCell" id="Iap-t8-owf" userLabel="InfoCollectionViewCell" customClass="InfoRocketCollectionViewCell" customModule="Rocket_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JKT-dL-1Fe">
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0h-vi-0KI">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvK-Jd-cb1" userLabel="InfoLabel">
                                                                     <rect key="frame" x="27" y="38" width="42" height="21"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                        </collectionViewCellContentView>
+                                                        </view>
                                                         <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <size key="customSize" width="96" height="96"/>
                                                         <connections>
-                                                            <outlet property="infoRocketCollectionViewCell" destination="w0h-vi-0KI" id="MXT-NU-09P"/>
+                                                            <outlet property="infoRocketCollectionViewCell" destination="SvK-Jd-cb1" id="UbT-i1-acK"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                                 <connections>
-                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Axg-e1-6cF"/>
-                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ojC-k0-RF2"/>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="can-PP-4Im"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DtR-bj-Ajf"/>
                                                 </connections>
                                             </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="qpK-FU-BHt" firstAttribute="leading" secondItem="RQm-Bz-eLf" secondAttribute="leading" id="GCN-Qd-OEp"/>
+                                            <constraint firstItem="qpK-FU-BHt" firstAttribute="top" secondItem="RQm-Bz-eLf" secondAttribute="top" id="H0B-SE-Q9N"/>
+                                            <constraint firstAttribute="bottom" secondItem="qpK-FU-BHt" secondAttribute="bottom" id="Kcj-QY-TVg"/>
                                             <constraint firstAttribute="height" constant="96" id="OLJ-uy-75f"/>
+                                            <constraint firstAttribute="trailing" secondItem="qpK-FU-BHt" secondAttribute="trailing" id="nqs-EU-ulN"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AV2-OW-ULI" userLabel="DescriptionRocketView">
                                         <rect key="frame" x="0.0" y="456" width="414" height="552"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="U26-UJ-GKC" userLabel="DescriptionTableView">
-                                                <rect key="frame" x="32" y="0.0" width="350" height="552"/>
+                                                <rect key="frame" x="32" y="40" width="350" height="512"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DescriptionTableViewCell" id="Mdx-Ls-UGo" userLabel="DescriptionTableViewCell" customClass="DescriptionTableViewCell" customModule="Rocket_iOS" customModuleProvider="target">
@@ -135,32 +138,45 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ghf-rU-7oI">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="129" height="19.5"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ghf-rU-7oI">
+                                                                    <rect key="frame" x="0.0" y="-9.5" width="350" height="63"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqg-aW-2FG" userLabel="NameDescriptionTableViewCellLabel">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="39" height="19.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqg-aW-2FG" userLabel="NameDescriptionTableViewCellLabel">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="204" height="63"/>
                                                                             <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                                             <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI4-al-iBd" userLabel="DescriptionDescriptionTableViewCellLabel">
-                                                                            <rect key="frame" x="45" y="0.0" width="39" height="19.5"/>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAa-p9-g88">
+                                                                            <rect key="frame" x="210" y="0.0" width="50" height="63"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnE-1I-W6e" userLabel="NameCharacteristicsTableViewCellLabel">
+                                                                            <rect key="frame" x="266" y="0.0" width="39" height="63"/>
                                                                             <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                                             <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnE-1I-W6e" userLabel="NameCharacteristicsTableViewCellLabel">
-                                                                            <rect key="frame" x="90" y="0.0" width="39" height="19.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI4-al-iBd" userLabel="DescriptionDescriptionTableViewCellLabel">
+                                                                            <rect key="frame" x="311" y="0.0" width="39" height="63"/>
                                                                             <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                                             <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="VI4-al-iBd" secondAttribute="trailing" id="C4F-nZ-eO2"/>
+                                                                    </constraints>
                                                                 </stackView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="ghf-rU-7oI" secondAttribute="trailing" id="QFB-tD-V6N"/>
+                                                                <constraint firstItem="ghf-rU-7oI" firstAttribute="centerY" secondItem="DtX-J3-pi6" secondAttribute="centerY" id="XJO-p3-8rF"/>
+                                                                <constraint firstItem="ghf-rU-7oI" firstAttribute="leading" secondItem="DtX-J3-pi6" secondAttribute="leading" id="biE-AM-96E"/>
+                                                            </constraints>
                                                         </tableViewCellContentView>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <connections>
                                                             <outlet property="nameDescriptionTableViewCellLabel" destination="Hqg-aW-2FG" id="MBB-Ys-HuM"/>
                                                         </connections>
@@ -175,10 +191,10 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="U26-UJ-GKC" firstAttribute="leading" secondItem="AV2-OW-ULI" secondAttribute="leading" constant="32" id="HJb-iZ-bLL"/>
-                                            <constraint firstAttribute="bottom" secondItem="U26-UJ-GKC" secondAttribute="bottom" id="Jhp-mX-vq7"/>
-                                            <constraint firstItem="U26-UJ-GKC" firstAttribute="top" secondItem="AV2-OW-ULI" secondAttribute="top" id="QHz-0G-fDL"/>
-                                            <constraint firstAttribute="trailing" secondItem="U26-UJ-GKC" secondAttribute="trailing" constant="32" id="gV4-3q-TpG"/>
+                                            <constraint firstItem="U26-UJ-GKC" firstAttribute="top" secondItem="AV2-OW-ULI" secondAttribute="top" constant="40" id="7RD-Qk-pDG"/>
+                                            <constraint firstAttribute="bottom" secondItem="U26-UJ-GKC" secondAttribute="bottom" id="DMR-BT-pnD"/>
+                                            <constraint firstAttribute="trailing" secondItem="U26-UJ-GKC" secondAttribute="trailing" constant="32" id="E8e-PQ-MGn"/>
+                                            <constraint firstItem="U26-UJ-GKC" firstAttribute="leading" secondItem="AV2-OW-ULI" secondAttribute="leading" constant="32" id="jJs-Wc-Zp9"/>
                                             <constraint firstAttribute="height" constant="552" id="nMi-AO-4UG"/>
                                         </constraints>
                                     </view>
@@ -215,21 +231,18 @@
                                     <constraint firstItem="rlK-kJ-9Sq" firstAttribute="leading" secondItem="SjG-3Q-Smq" secondAttribute="leading" id="3ZK-ex-4zX"/>
                                     <constraint firstItem="Onq-Nm-ygL" firstAttribute="leading" secondItem="SjG-3Q-Smq" secondAttribute="leading" id="564-ve-K3c"/>
                                     <constraint firstAttribute="trailing" secondItem="Onq-Nm-ygL" secondAttribute="trailing" id="Bvr-EA-GXK"/>
+                                    <constraint firstItem="ieV-0g-PoU" firstAttribute="top" secondItem="rlK-kJ-9Sq" secondAttribute="bottom" id="G7o-RT-ceM"/>
                                     <constraint firstItem="rlK-kJ-9Sq" firstAttribute="top" secondItem="SjG-3Q-Smq" secondAttribute="top" id="KVE-zZ-B76"/>
                                     <constraint firstAttribute="trailing" secondItem="rlK-kJ-9Sq" secondAttribute="trailing" id="LbF-6v-D6Y"/>
                                     <constraint firstItem="Onq-Nm-ygL" firstAttribute="top" secondItem="AV2-OW-ULI" secondAttribute="bottom" id="MkJ-ff-x3l"/>
                                     <constraint firstAttribute="trailing" secondItem="RQm-Bz-eLf" secondAttribute="trailing" id="Ox0-h9-TQh"/>
                                     <constraint firstItem="ieV-0g-PoU" firstAttribute="leading" secondItem="SjG-3Q-Smq" secondAttribute="leading" id="RTV-R4-RLm"/>
                                     <constraint firstItem="AV2-OW-ULI" firstAttribute="leading" secondItem="SjG-3Q-Smq" secondAttribute="leading" id="RlE-y7-q3L"/>
-                                    <constraint firstAttribute="trailing" secondItem="ieV-0g-PoU" secondAttribute="trailing" id="SBp-vr-IIz"/>
                                     <constraint firstItem="RQm-Bz-eLf" firstAttribute="leading" secondItem="SjG-3Q-Smq" secondAttribute="leading" id="Sgi-6X-kHX"/>
                                     <constraint firstAttribute="trailing" secondItem="AV2-OW-ULI" secondAttribute="trailing" id="Y8X-TA-iWh"/>
-                                    <constraint firstItem="rlK-kJ-9Sq" firstAttribute="top" secondItem="SjG-3Q-Smq" secondAttribute="top" id="cjw-6n-Rxi"/>
-                                    <constraint firstItem="ieV-0g-PoU" firstAttribute="top" secondItem="rlK-kJ-9Sq" secondAttribute="bottom" id="ohL-jF-lYz"/>
                                     <constraint firstAttribute="bottom" secondItem="Onq-Nm-ygL" secondAttribute="bottom" id="tNa-hZ-eff"/>
-                                    <constraint firstItem="rlK-kJ-9Sq" firstAttribute="leading" secondItem="SjG-3Q-Smq" secondAttribute="leading" id="vEz-3e-nrP"/>
                                     <constraint firstItem="AV2-OW-ULI" firstAttribute="top" secondItem="RQm-Bz-eLf" secondAttribute="bottom" id="x78-Oh-yCs"/>
-                                    <constraint firstAttribute="trailing" secondItem="rlK-kJ-9Sq" secondAttribute="trailing" id="xyq-mx-EDZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ieV-0g-PoU" secondAttribute="trailing" id="zVu-tE-xqg"/>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWn-tW-r84" userLabel="BottomSliderView">
@@ -256,8 +269,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RQm-Bz-eLf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="99s-JN-eoK"/>
-                            <constraint firstItem="ieV-0g-PoU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Aui-QW-M9S"/>
                             <constraint firstAttribute="bottom" secondItem="SjG-3Q-Smq" secondAttribute="bottom" id="D2J-lp-rs3"/>
                             <constraint firstItem="Onq-Nm-ygL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DLJ-Ms-9gb"/>
                             <constraint firstItem="SjG-3Q-Smq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="J8k-pv-CB9"/>
@@ -267,13 +278,11 @@
                             <constraint firstItem="IWn-tW-r84" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UIo-zP-EJC"/>
                             <constraint firstItem="IWn-tW-r84" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bTh-Ug-HDf"/>
                             <constraint firstItem="IWn-tW-r84" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="700" id="jaf-Iu-dOZ"/>
-                            <constraint firstItem="AV2-OW-ULI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="k3c-9w-wdd"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1168"/>
                     <connections>
                         <outlet property="descriptionTableView" destination="U26-UJ-GKC" id="oH5-wh-ah7"/>
-                        <outlet property="infoRocketCollectionView" destination="1mk-cL-CLn" id="aZQ-wu-m9K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
