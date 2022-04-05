@@ -9,11 +9,16 @@ import UIKit
 
 class MainRocketViewController: UIViewController {
     
-    var array = [
-    1,2,3,4,5,6,7,8,9,10,11,12,13
+    var arrayTestDecs = [
+     "Первый запуск","Страна","Стоимость запуска","Количество двигателей","Количество топлива","Время сгорания","Количество двигателей","Количество топлива","Время сгорания"
     ]
 
-    @IBOutlet weak var characteristicsTableView: UITableView!
+    var arrayTestInfo = [
+     "Высота","Диаметр","Масса","Нагрузка"
+    ]
+    @IBOutlet weak var infoRocketCollectionView: UICollectionView!
+    
+    @IBOutlet weak var descriptionTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +30,40 @@ class MainRocketViewController: UIViewController {
 
 extension MainRocketViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
+        return arrayTestDecs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicsTableViewCell", for: indexPath) as? CharacteristicsTableViewCell else { return UITableViewCell()}
-        cell.configure(textCell: array[indexPath.row])
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as? DescriptionTableViewCell else { return UITableViewCell()}
+        cell.configure(textCell: arrayTestDecs[indexPath.row])
         cell.accessoryType = .disclosureIndicator
         return cell
     }
+    
+}
+
+extension MainRocketViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrayTestInfo.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfoRocketCollectionViewCell", for: indexPath) as? InfoRocketCollectionViewCell else { return InfoRocketCollectionViewCell()}
+        cell.configure(textCell: arrayTestInfo[indexPath.row])
+        //cell.accessoryType = .disclosureIndicator
+        return cell
+    }
+    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return arrayTestDecs.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as? DescriptionTableViewCell else { return UITableViewCell()}
+//        cell.configure(textCell: arrayTestDecs[indexPath.row])
+//        cell.accessoryType = .disclosureIndicator
+//        return cell
+//    }
     
 }
 
