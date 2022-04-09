@@ -33,5 +33,3 @@ struct DescriptionRocket {
 struct DescriptionRocketTable {
     var descriptionRocketTable: [DescriptionRocket] = []
 }
-
-

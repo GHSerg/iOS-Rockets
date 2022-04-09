@@ -9,13 +9,12 @@ import UIKit
 
 class InformationCollectionViewCell: UITableViewCell {
 
-    //@IBOutlet weak var infoTableVewCell: UILabel!
-    
+    // @IBOutlet weak var infoTableVewCell: UILabel!
+
     @IBOutlet weak var infoTableViewCell: UILabel!
-    func configure(textCell: String ){
+    func configure(textCell: String ) {
 
        infoTableViewCell.text = textCell
     }
-    
 
 }

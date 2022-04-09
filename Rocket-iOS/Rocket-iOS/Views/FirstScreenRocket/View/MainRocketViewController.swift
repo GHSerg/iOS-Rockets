@@ -9,19 +9,18 @@ import UIKit
 
 class MainRocketViewController: UIViewController {
     
-   // var descriptionArray: String
+    // var descriptionArray: String
     var arrayTestDecs = [
-        "Первый запуск","Страна","Стоимость запуска","Количество двигателей","Количество топлива","Время сгорания","Количество двигателей","Количество топлива","Время сгорания"
+        "Первый запуск", "Страна", "Стоимость запуска", "Количество двигателей", "Количество топлива", "Время сгорания", "Количество двигателей", "Количество топлива", "Время сгорания"
     ]
     
     var arrayTestInfo = [
-        "Высота","Диаметр","Масса","Нагрузка"
+        "Высота", "Диаметр", "Масса", "Нагрузка"
     ]
     
     @IBOutlet weak var rocketImageView: UIImageView!
     
     @IBOutlet weak var nameRocketLabel: UILabel!
-
     
     @IBOutlet weak var infoRocketView: UIView!
     @IBOutlet weak var infoCollectionView: UICollectionView!
@@ -30,19 +29,15 @@ class MainRocketViewController: UIViewController {
     
     @IBOutlet weak var pageControlView: UIPageControl!
     
-    
     @IBOutlet weak var launchesRocketButtonOutlet: UIButton!
-
     
     @IBOutlet weak var nameSettingsRocketView: UIView!
     
-
-    
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupLayout() // констрейнты, стеки
     }
     
@@ -59,31 +54,38 @@ class MainRocketViewController: UIViewController {
     }
     
     @IBAction func settingsActionRocketButton(_ sender: Any) {
+        
+        request()
+        
+    }
+    
+    func request() {
         guard let url = URL(string: "https://api.spacexdata.com/v4/rockets") else {
             return
         }
         
-        var request = URLRequest(url:url)
+        var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if error == nil, let data = data {
-                do {
-                    if let json = try JSONSerialization.jsonObject(with: data) as? [Any] {
-                        print(json)
-                    }
-                } catch {
-                    print (error)
-                }
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard error == nil, let data = data else { return }
+            
+            print (data)
+            
+            do {
+                let jsonRocket = try JSONDecoder().decode([JsonRocket].self, from: data)
+                //                    if let json = try JSONSerialization.jsonObject(with: data) as? [Any] {
+                //                        print(json)
+                //                    }
+                print(jsonRocket)
+            } catch {
+                print(error)
             }
-        }
-        
-        task.resume()
+        }.resume()
     }
-    
 }
 
-//MARK: - DescriptionTableViewCell
+// MARK: - DescriptionTableViewCell
 
 extension MainRocketViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -98,7 +100,7 @@ extension MainRocketViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-//MARK: - InfoRocketCollectionViewCell
+// MARK: - InfoRocketCollectionViewCell
 
 extension MainRocketViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -113,8 +115,7 @@ extension MainRocketViewController: UICollectionViewDelegate, UICollectionViewDa
     }
 }
 
-
-//MARK: - Constants
+// MARK: - Constants
 
 extension MainRocketViewController {
     enum Metric {

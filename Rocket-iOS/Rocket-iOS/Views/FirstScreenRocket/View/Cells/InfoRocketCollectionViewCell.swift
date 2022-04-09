@@ -8,12 +8,11 @@
 import UIKit
 
 class InfoRocketCollectionViewCell: UICollectionViewCell {
-    
-  
+
     @IBOutlet weak var infoValueCellLabel: UILabel!
     @IBOutlet weak var infoValueNameCellLabel: UILabel!
-    
-    func configure(textCell: String ){
+
+    func configure(textCell: String ) {
 
         infoValueCellLabel.text = textCell
     }
