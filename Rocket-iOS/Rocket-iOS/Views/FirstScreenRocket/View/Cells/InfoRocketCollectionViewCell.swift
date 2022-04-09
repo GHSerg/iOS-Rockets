@@ -9,10 +9,12 @@ import UIKit
 
 class InfoRocketCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var infoRocketCollectionViewCell: UILabel!
+  
+    @IBOutlet weak var infoValueCellLabel: UILabel!
+    @IBOutlet weak var infoValueNameCellLabel: UILabel!
     
     func configure(textCell: String ){
 
-        infoRocketCollectionViewCell.text = textCell
+        infoValueCellLabel.text = textCell
     }
 }

@@ -13,7 +13,8 @@ class DescriptionTableViewCell: UITableViewCell {
 
 
     @IBOutlet weak var nameDescriptionTableViewCellLabel: UILabel!
-    
+    @IBOutlet weak var nameCharacteristicsTableViewCellLabel: UILabel!
+    @IBOutlet weak var descriptionDescriptionTableViewCellLabel: UILabel!
     
     func configure(textCell: String ){
 

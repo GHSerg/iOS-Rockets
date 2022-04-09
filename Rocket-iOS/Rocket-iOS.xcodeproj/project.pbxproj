@@ -8,21 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		9D1252B627F9E4620067A427 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1252B527F9E4620067A427 /* DescriptionTableViewCell.swift */; };
-		9D2C39E227FB2E8E00FCB361 /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D2C39E027FB2E8E00FCB361 /* LabGrotesque-Bold.ttf */; };
-		9D2C39E327FB2E8E00FCB361 /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D2C39E127FB2E8E00FCB361 /* LabGrotesque-Regular.ttf */; };
 		9D669F5327ED8AE100525E6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D669F5227ED8AE100525E6F /* AppDelegate.swift */; };
 		9D669F5527ED8AE100525E6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D669F5427ED8AE100525E6F /* SceneDelegate.swift */; };
 		9D669F5727ED8AE100525E6F /* MainRocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D669F5627ED8AE100525E6F /* MainRocketViewController.swift */; };
 		9D669F5A27ED8AE100525E6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D669F5827ED8AE100525E6F /* Main.storyboard */; };
 		9D669F5C27ED8AE200525E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D669F5B27ED8AE200525E6F /* Assets.xcassets */; };
 		9D669F5F27ED8AE200525E6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D669F5D27ED8AE200525E6F /* LaunchScreen.storyboard */; };
+		9D7A5CBD280149C20091CFCF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A5CBC280149C20091CFCF /* MainViewModel.swift */; };
 		9DE5DC4927FC5651004B7DBD /* InfoRocketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5DC4827FC5651004B7DBD /* InfoRocketCollectionViewCell.swift */; };
+		9DE6EC9127FFFC86007C5AB2 /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6EC9027FFFC86007C5AB2 /* LabGrotesque-Regular.ttf */; };
+		9DE6EC9327FFFC8F007C5AB2 /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6EC9227FFFC8F007C5AB2 /* LabGrotesque-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9D1252B527F9E4620067A427 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
-		9D2C39E027FB2E8E00FCB361 /* LabGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LabGrotesque-Bold.ttf"; path = "../../../../../../../Downloads/Lab Grotesque/LabGrotesque-Bold.ttf"; sourceTree = "<group>"; };
-		9D2C39E127FB2E8E00FCB361 /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "LabGrotesque-Regular.ttf"; path = "../../../../../../../Downloads/Lab Grotesque/LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
 		9D669F4F27ED8AE100525E6F /* Rocket-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rocket-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D669F5227ED8AE100525E6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D669F5427ED8AE100525E6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +30,10 @@
 		9D669F5B27ED8AE200525E6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D669F5E27ED8AE200525E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D669F6027ED8AE200525E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D7A5CBC280149C20091CFCF /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9DE5DC4827FC5651004B7DBD /* InfoRocketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRocketCollectionViewCell.swift; sourceTree = "<group>"; };
+		9DE6EC9027FFFC86007C5AB2 /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
+		9DE6EC9227FFFC8F007C5AB2 /* LabGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +59,8 @@
 		9D2C39DF27FB2D8C00FCB361 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				9D2C39E027FB2E8E00FCB361 /* LabGrotesque-Bold.ttf */,
-				9D2C39E127FB2E8E00FCB361 /* LabGrotesque-Regular.ttf */,
+				9DE6EC9027FFFC86007C5AB2 /* LabGrotesque-Regular.ttf */,
+				9DE6EC9227FFFC8F007C5AB2 /* LabGrotesque-Bold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -82,17 +84,130 @@
 		9D669F5127ED8AE100525E6F /* Rocket-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9D2C39DF27FB2D8C00FCB361 /* Fonts */,
-				9D1252B427F9E4010067A427 /* Cells */,
 				9D669F5227ED8AE100525E6F /* AppDelegate.swift */,
 				9D669F5427ED8AE100525E6F /* SceneDelegate.swift */,
-				9D669F5627ED8AE100525E6F /* MainRocketViewController.swift */,
+				9DE6EC9E2800050C007C5AB2 /* Views */,
+				9D2C39DF27FB2D8C00FCB361 /* Fonts */,
+				9DE6EC8B27FFF873007C5AB2 /* Resources */,
 				9D669F5827ED8AE100525E6F /* Main.storyboard */,
 				9D669F5B27ED8AE200525E6F /* Assets.xcassets */,
 				9D669F5D27ED8AE200525E6F /* LaunchScreen.storyboard */,
 				9D669F6027ED8AE200525E6F /* Info.plist */,
 			);
 			path = "Rocket-iOS";
+			sourceTree = "<group>";
+		};
+		9DE6EC8827FFF770007C5AB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D7A5CBC280149C20091CFCF /* MainViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9DE6EC8927FFF7C5007C5AB2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9DE6EC8A27FFF7F7007C5AB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D1252B427F9E4010067A427 /* Cells */,
+				9D669F5627ED8AE100525E6F /* MainRocketViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DE6EC8B27FFF873007C5AB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9DE6EC9427FFFEC7007C5AB2 /* FirstScreenRocket */ = {
+			isa = PBXGroup;
+			children = (
+				9DE6EC8827FFF770007C5AB2 /* Model */,
+				9DE6EC8A27FFF7F7007C5AB2 /* View */,
+				9DE6EC8927FFF7C5007C5AB2 /* ViewModel */,
+			);
+			path = FirstScreenRocket;
+			sourceTree = "<group>";
+		};
+		9DE6EC95280000EC007C5AB2 /* SecondScreenRocket */ = {
+			isa = PBXGroup;
+			children = (
+				9DE6EC9928000199007C5AB2 /* Model */,
+				9DE6EC982800018C007C5AB2 /* View */,
+				9DE6EC9728000179007C5AB2 /* ViewModel */,
+			);
+			path = SecondScreenRocket;
+			sourceTree = "<group>";
+		};
+		9DE6EC9628000144007C5AB2 /* ThirdScreenRocket */ = {
+			isa = PBXGroup;
+			children = (
+				9DE6EC9C280001C2007C5AB2 /* Model */,
+				9DE6EC9B280001B6007C5AB2 /* View */,
+				9DE6EC9A280001A5007C5AB2 /* ViewModel */,
+			);
+			path = ThirdScreenRocket;
+			sourceTree = "<group>";
+		};
+		9DE6EC9728000179007C5AB2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9DE6EC982800018C007C5AB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DE6EC9928000199007C5AB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9DE6EC9A280001A5007C5AB2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9DE6EC9B280001B6007C5AB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9DE6EC9C280001C2007C5AB2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9DE6EC9E2800050C007C5AB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9DE6EC9427FFFEC7007C5AB2 /* FirstScreenRocket */,
+				9DE6EC95280000EC007C5AB2 /* SecondScreenRocket */,
+				9DE6EC9628000144007C5AB2 /* ThirdScreenRocket */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D669F5F27ED8AE200525E6F /* LaunchScreen.storyboard in Resources */,
-				9D2C39E227FB2E8E00FCB361 /* LabGrotesque-Bold.ttf in Resources */,
-				9D2C39E327FB2E8E00FCB361 /* LabGrotesque-Regular.ttf in Resources */,
+				9DE6EC9127FFFC86007C5AB2 /* LabGrotesque-Regular.ttf in Resources */,
 				9D669F5C27ED8AE200525E6F /* Assets.xcassets in Resources */,
+				9DE6EC9327FFFC8F007C5AB2 /* LabGrotesque-Bold.ttf in Resources */,
 				9D669F5A27ED8AE100525E6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +288,7 @@
 				9D669F5327ED8AE100525E6F /* AppDelegate.swift in Sources */,
 				9DE5DC4927FC5651004B7DBD /* InfoRocketCollectionViewCell.swift in Sources */,
 				9D669F5527ED8AE100525E6F /* SceneDelegate.swift in Sources */,
+				9D7A5CBD280149C20091CFCF /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
