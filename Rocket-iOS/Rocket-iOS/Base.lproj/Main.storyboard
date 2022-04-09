@@ -1,24 +1,342 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="LabGrotesque-Bold.ttf">
+            <string>LabGrotesque-Bold</string>
+        </array>
+        <array key="LabGrotesque-Regular.ttf">
+            <string>LabGrotesque-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main Rocket View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainRocketViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1168"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="SjG-3Q-Smq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1168"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlK-kJ-9Sq" userLabel="ImageRocketView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="248"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ms-Fd-E9S" userLabel="ImageRocket">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                        <constraints>
+                                            <constraint firstItem="6ms-Fd-E9S" firstAttribute="top" secondItem="rlK-kJ-9Sq" secondAttribute="top" id="5ac-UG-iYc"/>
+                                            <constraint firstAttribute="bottom" secondItem="6ms-Fd-E9S" secondAttribute="bottom" constant="-200" id="6RT-rR-NAW"/>
+                                            <constraint firstItem="6ms-Fd-E9S" firstAttribute="leading" secondItem="rlK-kJ-9Sq" secondAttribute="leading" id="FV6-RB-WBk"/>
+                                            <constraint firstItem="6ms-Fd-E9S" firstAttribute="leading" secondItem="rlK-kJ-9Sq" secondAttribute="leading" id="HgA-qj-4yY"/>
+                                            <constraint firstItem="6ms-Fd-E9S" firstAttribute="top" secondItem="rlK-kJ-9Sq" secondAttribute="top" id="S1j-Nt-AeI"/>
+                                            <constraint firstAttribute="height" constant="248" id="ZfQ-nR-lO2"/>
+                                            <constraint firstAttribute="trailing" secondItem="6ms-Fd-E9S" secondAttribute="trailing" id="aUf-Pa-P0I"/>
+                                            <constraint firstAttribute="trailing" secondItem="6ms-Fd-E9S" secondAttribute="trailing" id="flF-cA-pPz"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieV-0g-PoU" userLabel="NameSettingsRocketView">
+                                        <rect key="frame" x="0.0" y="248" width="414" height="112"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2a-ga-2IK" userLabel="NameSettingsStackViewH">
+                                                <rect key="frame" x="32" y="31" width="350.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Falcon Heavy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6V-3z-qyp" userLabel="NameRocketLabel">
+                                                        <rect key="frame" x="0.0" y="0.0" width="148.5" height="50"/>
+                                                        <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="24"/>
+                                                        <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="DaE-ks-D61" userLabel="SpacerView">
+                                                        <rect key="frame" x="148.5" y="0.0" width="138.5" height="50"/>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40o-TE-1DL" userLabel="SettingsRocketButton">
+                                                        <rect key="frame" x="287" y="0.0" width="63.5" height="50"/>
+                                                        <color key="tintColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="">
+                                                            <imageReference key="image" image="gearshape" catalog="system" symbolScale="large"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="settingsActionRocketButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TTC-Qd-RsD"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="v2a-ga-2IK" secondAttribute="trailing" constant="31.5" id="JzJ-SJ-ha8"/>
+                                            <constraint firstItem="v2a-ga-2IK" firstAttribute="centerY" secondItem="ieV-0g-PoU" secondAttribute="centerY" id="UR1-mW-KmZ"/>
+                                            <constraint firstAttribute="height" constant="112" id="sZU-jK-NnH"/>
+                                            <constraint firstItem="v2a-ga-2IK" firstAttribute="leading" secondItem="ieV-0g-PoU" secondAttribute="leading" constant="32" id="tbF-Tu-HPX"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQm-Bz-eLf" userLabel="InfoRocketView">
+                                        <rect key="frame" x="0.0" y="360" width="414" height="96"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qpK-FU-BHt" userLabel="InfoCollectionView">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="12" minimumInteritemSpacing="12" id="0ws-tB-WAD">
+                                                    <size key="itemSize" width="96" height="96"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InfoRocketCollectionViewCell" id="Iap-t8-owf" userLabel="InfoCollectionViewCell" customClass="InfoRocketCollectionViewCell" customModule="Rocket_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="229.6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvK-Jd-cb1" userLabel="InfoValueCellLabel">
+                                                                    <rect key="frame" x="28" y="28" width="40.5" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-y2-5Qh" userLabel="InfoValueNameCellLabel">
+                                                                    <rect key="frame" x="31" y="47.5" width="34" height="17"/>
+                                                                    <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="14"/>
+                                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </view>
+                                                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="ILB-y2-5Qh" firstAttribute="top" secondItem="SvK-Jd-cb1" secondAttribute="bottom" id="5cK-Wl-ATT"/>
+                                                            <constraint firstItem="ILB-y2-5Qh" firstAttribute="centerX" secondItem="Iap-t8-owf" secondAttribute="centerX" id="7DS-mv-Ngp"/>
+                                                            <constraint firstItem="SvK-Jd-cb1" firstAttribute="centerX" secondItem="Iap-t8-owf" secondAttribute="centerX" id="8FN-C3-9Qq"/>
+                                                            <constraint firstItem="SvK-Jd-cb1" firstAttribute="top" secondItem="Iap-t8-owf" secondAttribute="top" constant="28" id="lOG-e3-oWc"/>
+                                                        </constraints>
+                                                        <size key="customSize" width="96" height="96"/>
+                                                        <connections>
+                                                            <outlet property="infoValueCellLabel" destination="SvK-Jd-cb1" id="5XI-ah-lma"/>
+                                                            <outlet property="infoValueNameCellLabel" destination="ILB-y2-5Qh" id="u0G-lh-716"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="can-PP-4Im"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DtR-bj-Ajf"/>
+                                                </connections>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="qpK-FU-BHt" firstAttribute="top" secondItem="RQm-Bz-eLf" secondAttribute="top" id="H0B-SE-Q9N"/>
+                                            <constraint firstAttribute="bottom" secondItem="qpK-FU-BHt" secondAttribute="bottom" id="Kcj-QY-TVg"/>
+                                            <constraint firstAttribute="height" constant="96" id="OLJ-uy-75f"/>
+                                            <constraint firstAttribute="trailing" secondItem="qpK-FU-BHt" secondAttribute="trailing" id="XpX-yM-XrE"/>
+                                            <constraint firstItem="qpK-FU-BHt" firstAttribute="leading" secondItem="RQm-Bz-eLf" secondAttribute="leading" id="kbX-Pe-hIY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AV2-OW-ULI" userLabel="DescriptionRocketView">
+                                        <rect key="frame" x="0.0" y="456" width="414" height="552"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="U26-UJ-GKC" userLabel="DescriptionTableView">
+                                                <rect key="frame" x="32" y="40" width="350" height="512"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DescriptionTableViewCell" id="Mdx-Ls-UGo" userLabel="DescriptionTableViewCell" customClass="DescriptionTableViewCell" customModule="Rocket_iOS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="44.5" width="350" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mdx-Ls-UGo" id="DtX-J3-pi6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="44"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ghf-rU-7oI">
+                                                                    <rect key="frame" x="0.0" y="-9.5" width="350" height="63"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqg-aW-2FG" userLabel="NameDescriptionTableViewCellLabel">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="204" height="63"/>
+                                                                            <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                            <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAa-p9-g88">
+                                                                            <rect key="frame" x="210" y="0.0" width="50" height="63"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnE-1I-W6e" userLabel="NameCharacteristicsTableViewCellLabel">
+                                                                            <rect key="frame" x="266" y="0.0" width="39" height="63"/>
+                                                                            <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                            <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI4-al-iBd" userLabel="DescriptionDescriptionTableViewCellLabel">
+                                                                            <rect key="frame" x="311" y="0.0" width="39" height="63"/>
+                                                                            <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                            <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="VI4-al-iBd" secondAttribute="trailing" id="C4F-nZ-eO2"/>
+                                                                    </constraints>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="ghf-rU-7oI" secondAttribute="trailing" id="QFB-tD-V6N"/>
+                                                                <constraint firstItem="ghf-rU-7oI" firstAttribute="centerY" secondItem="DtX-J3-pi6" secondAttribute="centerY" id="XJO-p3-8rF"/>
+                                                                <constraint firstItem="ghf-rU-7oI" firstAttribute="leading" secondItem="DtX-J3-pi6" secondAttribute="leading" id="biE-AM-96E"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <connections>
+                                                            <outlet property="descriptionDescriptionTableViewCellLabel" destination="VI4-al-iBd" id="pFh-0J-gMR"/>
+                                                            <outlet property="nameCharacteristicsTableViewCellLabel" destination="jnE-1I-W6e" id="rgV-6R-y6m"/>
+                                                            <outlet property="nameDescriptionTableViewCellLabel" destination="Hqg-aW-2FG" id="MBB-Ys-HuM"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <sections/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ITe-FV-IxF"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zat-Vz-XWp"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="U26-UJ-GKC" firstAttribute="top" secondItem="AV2-OW-ULI" secondAttribute="top" constant="40" id="7RD-Qk-pDG"/>
+                                            <constraint firstAttribute="bottom" secondItem="U26-UJ-GKC" secondAttribute="bottom" id="DMR-BT-pnD"/>
+                                            <constraint firstAttribute="trailing" secondItem="U26-UJ-GKC" secondAttribute="trailing" constant="32" id="E8e-PQ-MGn"/>
+                                            <constraint firstItem="U26-UJ-GKC" firstAttribute="leading" secondItem="AV2-OW-ULI" secondAttribute="leading" constant="32" id="jJs-Wc-Zp9"/>
+                                            <constraint firstAttribute="height" constant="552" id="nMi-AO-4UG"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Onq-Nm-ygL" userLabel="LaunchesButton">
+                                        <rect key="frame" x="0.0" y="1008" width="414" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ai8-ra-zFP" userLabel="LaunchesButton">
+                                                <rect key="frame" x="32" y="0.0" width="350" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="Cig-L4-uyY"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Посмотреть запуски">
+                                                    <backgroundConfiguration key="background" cornerRadius="12">
+                                                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="24"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="launchesRocketButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ib8-xI-Bcg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="84L-DM-xqJ"/>
+                                            <constraint firstItem="ai8-ra-zFP" firstAttribute="leading" secondItem="Onq-Nm-ygL" secondAttribute="leading" constant="32" id="WTi-T2-v8W"/>
+                                            <constraint firstAttribute="trailing" secondItem="ai8-ra-zFP" secondAttribute="trailing" constant="32" id="iUz-qX-LE1"/>
+                                            <constraint firstAttribute="bottom" secondItem="ai8-ra-zFP" secondAttribute="bottom" constant="104" id="z2y-57-hTJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="RQm-Bz-eLf" firstAttribute="top" secondItem="ieV-0g-PoU" secondAttribute="bottom" id="0M9-Qi-j1j"/>
+                                    <constraint firstItem="rlK-kJ-9Sq" firstAttribute="leading" secondItem="SjG-3Q-Smq" secondAttribute="leading" id="3ZK-ex-4zX"/>
+                                    <constraint firstItem="Onq-Nm-ygL" firstAttribute="leading" secondItem="SjG-3Q-Smq" secondAttribute="leading" id="564-ve-K3c"/>
+                                    <constraint firstAttribute="trailing" secondItem="Onq-Nm-ygL" secondAttribute="trailing" id="Bvr-EA-GXK"/>
+                                    <constraint firstItem="ieV-0g-PoU" firstAttribute="top" secondItem="rlK-kJ-9Sq" secondAttribute="bottom" id="G7o-RT-ceM"/>
+                                    <constraint firstItem="rlK-kJ-9Sq" firstAttribute="top" secondItem="SjG-3Q-Smq" secondAttribute="top" id="KVE-zZ-B76"/>
+                                    <constraint firstAttribute="trailing" secondItem="rlK-kJ-9Sq" secondAttribute="trailing" id="LbF-6v-D6Y"/>
+                                    <constraint firstItem="Onq-Nm-ygL" firstAttribute="top" secondItem="AV2-OW-ULI" secondAttribute="bottom" id="MkJ-ff-x3l"/>
+                                    <constraint firstAttribute="trailing" secondItem="RQm-Bz-eLf" secondAttribute="trailing" id="Ox0-h9-TQh"/>
+                                    <constraint firstItem="ieV-0g-PoU" firstAttribute="leading" secondItem="SjG-3Q-Smq" secondAttribute="leading" id="RTV-R4-RLm"/>
+                                    <constraint firstItem="AV2-OW-ULI" firstAttribute="leading" secondItem="SjG-3Q-Smq" secondAttribute="leading" id="RlE-y7-q3L"/>
+                                    <constraint firstItem="RQm-Bz-eLf" firstAttribute="leading" secondItem="SjG-3Q-Smq" secondAttribute="leading" id="Sgi-6X-kHX"/>
+                                    <constraint firstAttribute="trailing" secondItem="AV2-OW-ULI" secondAttribute="trailing" id="Y8X-TA-iWh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Onq-Nm-ygL" secondAttribute="bottom" id="tNa-hZ-eff"/>
+                                    <constraint firstItem="AV2-OW-ULI" firstAttribute="top" secondItem="RQm-Bz-eLf" secondAttribute="bottom" id="x78-Oh-yCs"/>
+                                    <constraint firstAttribute="trailing" secondItem="ieV-0g-PoU" secondAttribute="trailing" id="zVu-tE-xqg"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWn-tW-r84" userLabel="BottomSliderView">
+                                <rect key="frame" x="0.0" y="744" width="414" height="72"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nXp-lS-7ej">
+                                        <rect key="frame" x="149.5" y="23" width="115.5" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115.5" id="Gdd-Cw-uwF"/>
+                                            <constraint firstAttribute="width" constant="115.5" id="KT3-aS-6Ql"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="MLH-ho-RWV"/>
+                                            <constraint firstAttribute="height" constant="26" id="csx-jm-M7d"/>
+                                        </constraints>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="nXp-lS-7ej" firstAttribute="centerY" secondItem="IWn-tW-r84" secondAttribute="centerY" id="bcu-Vb-IDn"/>
+                                    <constraint firstItem="nXp-lS-7ej" firstAttribute="centerX" secondItem="IWn-tW-r84" secondAttribute="centerX" id="icA-LH-n7N"/>
+                                    <constraint firstAttribute="height" constant="72" id="uxy-bS-0iT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="SjG-3Q-Smq" secondAttribute="bottom" id="D2J-lp-rs3"/>
+                            <constraint firstItem="Onq-Nm-ygL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DLJ-Ms-9gb"/>
+                            <constraint firstItem="SjG-3Q-Smq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="J8k-pv-CB9"/>
+                            <constraint firstItem="SjG-3Q-Smq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Mh5-Sl-x4I"/>
+                            <constraint firstItem="SjG-3Q-Smq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OII-y4-QcZ"/>
+                            <constraint firstItem="SjG-3Q-Smq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TLQ-bo-VXQ"/>
+                            <constraint firstItem="IWn-tW-r84" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UIo-zP-EJC"/>
+                            <constraint firstItem="IWn-tW-r84" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bTh-Ug-HDf"/>
+                            <constraint firstItem="IWn-tW-r84" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="700" id="jaf-Iu-dOZ"/>
+                        </constraints>
                     </view>
+                    <size key="freeformSize" width="414" height="1168"/>
+                    <connections>
+                        <outlet property="descriptionTableView" destination="U26-UJ-GKC" id="oH5-wh-ah7"/>
+                        <outlet property="infoCollectionView" destination="qpK-FU-BHt" id="SmV-iB-Q4J"/>
+                        <outlet property="infoRocketView" destination="RQm-Bz-eLf" id="iT0-tx-cxB"/>
+                        <outlet property="launchesRocketButtonOutlet" destination="ai8-ra-zFP" id="A5A-EN-oqn"/>
+                        <outlet property="nameRocketLabel" destination="N6V-3z-qyp" id="KQo-Z3-DrI"/>
+                        <outlet property="nameSettingsRocketView" destination="ieV-0g-PoU" id="Bwf-u2-6lK"/>
+                        <outlet property="pageControlView" destination="nXp-lS-7ej" id="BgY-uK-9sV"/>
+                        <outlet property="rocketImageView" destination="6ms-Fd-E9S" id="3zg-P4-QjV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-113.04347826086958" y="35.491071428571423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
