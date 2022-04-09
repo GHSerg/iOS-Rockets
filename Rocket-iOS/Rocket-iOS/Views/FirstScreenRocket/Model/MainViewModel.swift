@@ -9,16 +9,17 @@ import Foundation
 import UIKit
 
 struct ImageRocket {
-    var imageRocket: UIImage?
+    var imageRocket: UIImage
 }
 
 struct NameSettingRocket {
-    var name: String?
+    var name: String
 }
 
 struct InfoRocket {
-    var nameValue: String?
-    var value: String?
+    var nameValue: String
+    var value: String
+    var defaultValue: Bool
 }
 
 struct InfoRocketCollection {
@@ -26,8 +27,8 @@ struct InfoRocketCollection {
 }
 
 struct DescriptionRocket {
-    var nameDescription: String?
-    var valueDescription: String?
+    var nameDescription: String
+    var valueDescription: String
 }
 
 struct DescriptionRocketTable {

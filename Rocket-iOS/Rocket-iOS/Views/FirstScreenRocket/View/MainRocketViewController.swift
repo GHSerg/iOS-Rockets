@@ -58,31 +58,6 @@ class MainRocketViewController: UIViewController {
         request()
         
     }
-    
-    func request() {
-        guard let url = URL(string: "https://api.spacexdata.com/v4/rockets") else {
-            return
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            guard error == nil, let data = data else { return }
-            
-            print (data)
-            
-            do {
-                let jsonRocket = try JSONDecoder().decode([JsonRocket].self, from: data)
-                //                    if let json = try JSONSerialization.jsonObject(with: data) as? [Any] {
-                //                        print(json)
-                //                    }
-                print(jsonRocket)
-            } catch {
-                print(error)
-            }
-        }.resume()
-    }
 }
 
 // MARK: - DescriptionTableViewCell
