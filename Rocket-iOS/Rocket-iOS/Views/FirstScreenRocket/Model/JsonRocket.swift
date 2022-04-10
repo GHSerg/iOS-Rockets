@@ -19,7 +19,7 @@ struct JsonRocket: Decodable {
     
     var first_flight: String?
     var country: String?
-    var cost_per_launch: Double?
+    var cost_per_launch: Int?
     
     var first_stage: FirstStage?
     var second_stage: SecondStage?

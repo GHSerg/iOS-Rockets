@@ -557,10 +557,19 @@
                     </view>
                     <size key="freeformSize" width="412" height="1168"/>
                     <connections>
+                        <outlet property="burnSecFirstStageLabel" destination="5xP-2X-9l0" id="p78-3F-RRC"/>
+                        <outlet property="burnSecSecondStageLabel" destination="xPM-Lq-ZlP" id="0ns-Y1-cvM"/>
+                        <outlet property="costLabel" destination="niZ-a9-uOO" id="49a-2z-Php"/>
+                        <outlet property="countryLabel" destination="vr4-mf-n2k" id="toA-g8-zIq"/>
+                        <outlet property="enginesFirstStageLabel" destination="Mld-vt-AMb" id="drN-o5-u3g"/>
+                        <outlet property="enginesSecondStageLabel" destination="1jd-dX-J5O" id="ST5-d4-QCR"/>
+                        <outlet property="firstFlightLabel" destination="jWO-Lg-q3i" id="7Ii-c4-fyJ"/>
+                        <outlet property="fuelFirstStageLabel" destination="B19-7P-oMZ" id="JVj-SS-KdB"/>
+                        <outlet property="fuelSecondStageLabel" destination="VRC-7k-YDF" id="r5N-aH-ztC"/>
                         <outlet property="infoCollectionView" destination="qpK-FU-BHt" id="SmV-iB-Q4J"/>
                         <outlet property="infoRocketView" destination="RQm-Bz-eLf" id="iT0-tx-cxB"/>
                         <outlet property="launchesRocketButtonOutlet" destination="ai8-ra-zFP" id="A5A-EN-oqn"/>
-                        <outlet property="nameRocketLabel" destination="N6V-3z-qyp" id="KQo-Z3-DrI"/>
+                        <outlet property="nameRocketLabel" destination="N6V-3z-qyp" id="02s-gR-IpV"/>
                         <outlet property="nameSettingsRocketView" destination="ieV-0g-PoU" id="Bwf-u2-6lK"/>
                         <outlet property="pageControlView" destination="nXp-lS-7ej" id="BgY-uK-9sV"/>
                         <outlet property="rocketImageView" destination="6ms-Fd-E9S" id="3zg-P4-QjV"/>
