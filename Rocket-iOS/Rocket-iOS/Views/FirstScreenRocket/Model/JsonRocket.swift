@@ -57,8 +57,8 @@ struct SecondStage: Decodable {
     var burn_time_sec: Double?
 }
 
-func request() {
-    guard let url = URL(string: "https://api.spacexdata.com/v4/rockets") else {
+func request(urlString: String, completion: @escaping ([JsonRocket]?, Error?) -> Void) {
+    guard let url = URL(string: urlString) else {
         return
     }
     
@@ -66,15 +66,19 @@ func request() {
     request.httpMethod = "GET"
     
     URLSession.shared.dataTask(with: request) { data, response, error in
-        guard error == nil, let data = data else { return }
-        
-        print (data)
-        
-        do {
-            let jsonRocket = try JSONDecoder().decode([JsonRocket].self, from: data)
-            print(jsonRocket)
-        } catch {
-            print(error)
+        DispatchQueue.main.async {
+            guard error == nil, let data = data else { return }
+
+            do {
+                let json = try JSONDecoder().decode([JsonRocket].self, from: data)
+                completion (json, nil)
+                print(type(of: json))
+            } catch {
+                print(error)
+                completion (nil, error)
+            }
         }
+
     }.resume()
 }
+

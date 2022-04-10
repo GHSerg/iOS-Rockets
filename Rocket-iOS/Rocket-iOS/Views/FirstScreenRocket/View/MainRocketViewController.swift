@@ -55,7 +55,9 @@ class MainRocketViewController: UIViewController {
     
     @IBAction func settingsActionRocketButton(_ sender: Any) {
         
-        request()
+        request(urlString: "https://api.spacexdata.com/v4/rockets") { json, error in
+            print (json ?? "json = nil")
+        }
         
     }
 }
