@@ -587,14 +587,75 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkF-YK-0LA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
-                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="Fp1-d0-fI9">
+                                        <rect key="frame" x="16" y="54" width="343" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9q-aZ-4m4" userLabel="BackButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="24"/>
+                                                <color key="tintColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Назад">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    </preferredSymbolConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-Cg-2Np" userLabel="RocketNameTitleLabel">
+                                                <rect key="frame" x="135" y="0.0" width="73" height="24"/>
+                                                <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMK-7A-hGd" userLabel="Spacer">
+                                                <rect key="frame" x="255" y="0.0" width="88" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="m9q-aZ-4m4" firstAttribute="centerY" secondItem="Fp1-d0-fI9" secondAttribute="centerY" id="Dc4-ep-UpY"/>
+                                            <constraint firstItem="Arm-Cg-2Np" firstAttribute="centerX" secondItem="Fp1-d0-fI9" secondAttribute="centerX" id="RuJ-Sc-W2c"/>
+                                            <constraint firstAttribute="height" constant="24" id="op9-3v-sLg"/>
+                                            <constraint firstItem="Arm-Cg-2Np" firstAttribute="centerY" secondItem="Fp1-d0-fI9" secondAttribute="centerY" id="rps-nC-u7X"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Fp1-d0-fI9" firstAttribute="leading" secondItem="tkF-YK-0LA" secondAttribute="leading" constant="16" id="4uk-SR-JKa"/>
                                     <constraint firstAttribute="height" constant="88" id="XHZ-F0-n33"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fp1-d0-fI9" secondAttribute="trailing" constant="16" id="c3O-iP-gyF"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fp1-d0-fI9" secondAttribute="bottom" constant="10" id="wia-Su-zhn"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cB-93-Xjr">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jJd-GY-ct6">
+                                        <rect key="frame" x="32" y="40" width="311" height="684"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zbw-iu-1Fm">
+                                                <rect key="frame" x="0.0" y="44.666666030883789" width="311" height="43.666667938232422"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zbw-iu-1Fm" id="Qka-A2-dDf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="311" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jJd-GY-ct6" secondAttribute="bottom" id="YzF-HK-8Mo"/>
+                                    <constraint firstAttribute="trailing" secondItem="jJd-GY-ct6" secondAttribute="trailing" constant="32" id="jAe-cG-6Yn"/>
+                                    <constraint firstItem="jJd-GY-ct6" firstAttribute="top" secondItem="6cB-93-Xjr" secondAttribute="top" constant="40" id="oQW-Ue-3yB"/>
+                                    <constraint firstItem="jJd-GY-ct6" firstAttribute="leading" secondItem="6cB-93-Xjr" secondAttribute="leading" constant="32" id="tfc-cF-Td0"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FIA-AR-EmS"/>
@@ -616,15 +677,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
