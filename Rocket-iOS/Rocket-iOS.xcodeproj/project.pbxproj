@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D201719280422AF00395E04 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D201718280422AF00395E04 /* SecondViewController.swift */; };
 		9D669F5327ED8AE100525E6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D669F5227ED8AE100525E6F /* AppDelegate.swift */; };
 		9D669F5527ED8AE100525E6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D669F5427ED8AE100525E6F /* SceneDelegate.swift */; };
 		9D669F5727ED8AE100525E6F /* MainRocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D669F5627ED8AE100525E6F /* MainRocketViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D201718280422AF00395E04 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9D669F4F27ED8AE100525E6F /* Rocket-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rocket-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D669F5227ED8AE100525E6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D669F5427ED8AE100525E6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		9DE6EC982800018C007C5AB2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D201718280422AF00395E04 /* SecondViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				9D669F5727ED8AE100525E6F /* MainRocketViewController.swift in Sources */,
 				9D669F5327ED8AE100525E6F /* AppDelegate.swift in Sources */,
 				9DE5DC4927FC5651004B7DBD /* InfoRocketCollectionViewCell.swift in Sources */,
+				9D201719280422AF00395E04 /* SecondViewController.swift in Sources */,
 				9D669F5527ED8AE100525E6F /* SceneDelegate.swift in Sources */,
 				9D7A5CBD280149C20091CFCF /* MainViewModel.swift in Sources */,
 			);

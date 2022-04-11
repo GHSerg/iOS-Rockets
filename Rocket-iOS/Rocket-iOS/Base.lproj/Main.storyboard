@@ -577,11 +577,54 @@
             </objects>
             <point key="canvasLocation" x="-114.49275362318842" y="35.491071428571423"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="nkn-Il-syQ">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="JP0-Jz-USq" customClass="SecondViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R0q-QK-4OQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkF-YK-0LA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="XHZ-F0-n33"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cB-93-Xjr">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FIA-AR-EmS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tkF-YK-0LA" firstAttribute="leading" secondItem="FIA-AR-EmS" secondAttribute="leading" id="54y-C1-WHR"/>
+                            <constraint firstItem="6cB-93-Xjr" firstAttribute="top" secondItem="tkF-YK-0LA" secondAttribute="bottom" id="59f-tK-vDp"/>
+                            <constraint firstItem="tkF-YK-0LA" firstAttribute="trailing" secondItem="FIA-AR-EmS" secondAttribute="trailing" id="7gP-jf-2NJ"/>
+                            <constraint firstAttribute="bottom" secondItem="6cB-93-Xjr" secondAttribute="bottom" id="X9U-Ia-e0p"/>
+                            <constraint firstItem="6cB-93-Xjr" firstAttribute="leading" secondItem="tkF-YK-0LA" secondAttribute="leading" id="Xda-Rc-5WY"/>
+                            <constraint firstItem="tkF-YK-0LA" firstAttribute="top" secondItem="R0q-QK-4OQ" secondAttribute="top" id="ikZ-1z-6gU"/>
+                            <constraint firstItem="6cB-93-Xjr" firstAttribute="width" secondItem="tkF-YK-0LA" secondAttribute="width" id="ycE-IF-S4M"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t44-ac-fVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="-95.320197044334975"/>
+        </scene>
     </scenes>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
