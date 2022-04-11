@@ -601,6 +601,9 @@
                                                     </preferredSymbolConfiguration>
                                                     <fontDescription key="titleFontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="backButtonAction:" destination="JP0-Jz-USq" eventType="touchUpInside" id="K9d-nL-G9Z"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-Cg-2Np" userLabel="RocketNameTitleLabel">
                                                 <rect key="frame" x="135" y="0.0" width="73" height="24"/>
@@ -634,19 +637,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cB-93-Xjr">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jJd-GY-ct6">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jJd-GY-ct6">
                                         <rect key="frame" x="32" y="40" width="311" height="684"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zbw-iu-1Fm">
-                                                <rect key="frame" x="0.0" y="44.666666030883789" width="311" height="43.666667938232422"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondScreenTableViewCell" id="zbw-iu-1Fm" customClass="SecondScreenTableViewCell" customModule="Rocket_iOS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="44.666666030883789" width="311" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zbw-iu-1Fm" id="Qka-A2-dDf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="311" height="43.666667938232422"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="311" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="JP0-Jz-USq" id="5x1-W7-GY6"/>
+                                            <outlet property="delegate" destination="JP0-Jz-USq" id="hDM-6X-YF2"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -670,6 +677,10 @@
                             <constraint firstItem="6cB-93-Xjr" firstAttribute="width" secondItem="tkF-YK-0LA" secondAttribute="width" id="ycE-IF-S4M"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rocketNameTitleLabel" destination="Arm-Cg-2Np" id="xnv-jy-SkG"/>
+                        <outlet property="rocketTableView" destination="jJd-GY-ct6" id="zqz-LC-cSQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t44-ac-fVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

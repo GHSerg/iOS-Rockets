@@ -74,6 +74,10 @@ class MainRocketViewController: UIViewController {
     }
     
     @IBAction func launchesRocketButton(_ sender: Any) {
+        guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .flipHorizontal
+        self.present(controller, animated: true, completion: nil)
     }
     
     @IBAction func settingsActionRocketButton(_ sender: Any) {
