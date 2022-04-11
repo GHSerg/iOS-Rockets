@@ -36,13 +36,13 @@ struct DiameterRocket: Decodable {
 }
 
 struct MassRocket: Decodable {
-    var kg: Double?
-    var lb: Double?
+    var kg: Int?
+    var lb: Int?
 }
 
 struct PayloadWeights: Decodable {
-    var kg: Double?
-    var lb: Double?
+    var kg: Int?
+    var lb: Int?
 }
 
 struct FirstStage: Decodable {

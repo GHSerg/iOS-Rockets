@@ -12,8 +12,9 @@ class InfoRocketCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var infoValueCellLabel: UILabel!
     @IBOutlet weak var infoValueNameCellLabel: UILabel!
 
-    func configure(textCell: String ) {
+    func configure(nameCell: String, unitCell: String, valueCell: String ) {
 
-        infoValueCellLabel.text = textCell
+        infoValueNameCellLabel.text = nameCell + ", " + unitCell
+        infoValueCellLabel.text = valueCell
     }
 }

@@ -9,19 +9,21 @@ import UIKit
 
 class MainRocketViewController: UIViewController {
     
+    var rocket = 0
     var rockets: [JsonRocket]?
-    //var rocket: Int?
-    // var descriptionArray: String
-    //    var arrayTestDecs = [
-    //        "Первый запуск", "Страна", "Стоимость запуска", "Количество двигателей", "Количество топлива", "Время сгорания", "Количество двигателей", "Количество топлива", "Время сгорания"
-    //    ]
-    //
-    var arrayTestInfo = [
-        "Высота, ft", "Диаметр, ft", "Масса, lb", "Нагрузка, lb"
+
+    let countryDictionary = [
+        "none": "Отсутствует в словаре",
+        "Republic of the Marshall Islands": "Маршалловы Острова",
+        "United States": "США"
     ]
     
-    
-    
+    var infoRocket = [
+        ["name": "Высота", "unit": "ft", "value": "0.0"],
+        ["name": "Диаметр", "unit": "ft", "value": "0.0"],
+        ["name": "Масса", "unit": "lb", "value": "0.0"],
+        ["name": "Нагрузка", "unit": "lb", "value": "0.0"]
+    ]
     
     @IBOutlet weak var infoRocketView: UIView!
     @IBOutlet weak var infoCollectionView: UICollectionView!
@@ -52,16 +54,13 @@ class MainRocketViewController: UIViewController {
         super.viewDidLoad()
         
         request(urlString: "https://api.spacexdata.com/v4/rockets") { json, error in
-            print (json ?? "json = nil")
-            print(json?[0].name ?? "nil")
-            print(json?[0].height?.meters ?? "nil")
-            print(type(of: json![0] ) )
             self.rockets = json
         }
         
         setupLayout() // констрейнты, стеки
         
         setData()
+        //print (arrayTestInfotext[0][0] ?? "nil")
         
     }
     
@@ -83,31 +82,37 @@ class MainRocketViewController: UIViewController {
     }
 }
 
-//// MARK: - DescriptionTableViewCell
-//
-//extension MainRocketViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return arrayTestDecs.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as? DescriptionTableViewCell else { return UITableViewCell()}
-//        cell.configure(textCell: arrayTestDecs[indexPath.row])
-//        return cell
-//    }
-//
-//}
-
 // MARK: - Set Data
 
 extension MainRocketViewController {
     
     func setData () {
-        let rocket = 3
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        
+        rocket += 1
+        if rocket == infoRocket.count { rocket = 0 }
+        
+        infoRocket[0]["value"] = formatter.string(for: rockets?[rocket].height?.feet ?? 0)
+        infoRocket[1]["value"] = formatter.string(for: rockets?[rocket].diameter?.feet ?? 0)
+        infoRocket[2]["value"] = formatter.string(for: rockets?[rocket].mass?.lb ?? 0)
+        infoRocket[3]["value"] = formatter.string(for: rockets?[rocket].payload_weights.first??.lb ?? 0)
+
+        guard let url = URL(string: (((rockets?[rocket].flickr_images.randomElement()) ?? "https://farm1.staticflickr.com/745/32394687645_a9c54a34ef_b.jpg") ?? "https://farm1.staticflickr.com/745/32394687645_a9c54a34ef_b.jpg")) else {
+            return
+        }
+        rocketImageView.load(url: url)
         nameRocketLabel.text = rockets?[rocket].name
         
-        firstFlightLabel.text = rockets?[rocket].first_flight
-        countryLabel.text = rockets?[rocket].country
+        let formatterDate = DateFormatter()
+        let timestamp = rockets?[rocket].first_flight ?? "2000-12-01"
+        formatterDate.dateFormat = "yyyy-MM-dd"
+        let date = formatterDate.date(from: timestamp)
+        formatterDate.dateFormat = "dd MMMM, yyyy"
+
+        firstFlightLabel.text = formatterDate.string(from: date!)
+        countryLabel.text = countryDictionary[rockets?[rocket].country ??  "none"]
         costLabel.text = ("$\((rockets?[rocket].cost_per_launch ?? 0)/1_000_000 ) млн")
         
         enginesFirstStageLabel.text = ("\(rockets?[rocket].first_stage?.engines ?? 0)")
@@ -117,6 +122,8 @@ extension MainRocketViewController {
         enginesSecondStageLabel.text = ("\(rockets?[rocket].second_stage?.engines ?? 0)")
         fuelSecondStageLabel.text = ("\(rockets?[rocket].second_stage?.fuel_amount_tons ?? 0)")
         burnSecSecondStageLabel.text = ("\(rockets?[rocket].second_stage?.burn_time_sec ?? 0)")
+        
+        infoCollectionView.reloadData()
     }
 }
 
@@ -124,22 +131,39 @@ extension MainRocketViewController {
 
 extension MainRocketViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return rockets?.count ?? 0
+        return infoRocket.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfoRocketCollectionViewCell", for: indexPath) as? InfoRocketCollectionViewCell else { return InfoRocketCollectionViewCell()}
-        cell.configure(textCell: arrayTestInfo[indexPath.item])
+    
+        cell.configure(nameCell: infoRocket[indexPath.item]["name"] ?? "none",
+                       unitCell: infoRocket[indexPath.item]["unit"] ?? "none",
+                       valueCell: infoRocket[indexPath.item]["value"] ?? "none")
         cell.layer.cornerRadius = Metric.viewRound
         return cell
     }
 }
-
 
 // MARK: - Constants
 
 extension MainRocketViewController {
     enum Metric {
         static let viewRound: CGFloat = 32
+    }
+}
+
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
     }
 }

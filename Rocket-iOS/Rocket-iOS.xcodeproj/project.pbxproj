@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D1252B627F9E4620067A427 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1252B527F9E4620067A427 /* DescriptionTableViewCell.swift */; };
 		9D669F5327ED8AE100525E6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D669F5227ED8AE100525E6F /* AppDelegate.swift */; };
 		9D669F5527ED8AE100525E6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D669F5427ED8AE100525E6F /* SceneDelegate.swift */; };
 		9D669F5727ED8AE100525E6F /* MainRocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D669F5627ED8AE100525E6F /* MainRocketViewController.swift */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9D1252B527F9E4620067A427 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		9D669F4F27ED8AE100525E6F /* Rocket-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rocket-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D669F5227ED8AE100525E6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D669F5427ED8AE100525E6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +50,6 @@
 		9D1252B427F9E4010067A427 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9D1252B527F9E4620067A427 /* DescriptionTableViewCell.swift */,
 				9DE5DC4827FC5651004B7DBD /* InfoRocketCollectionViewCell.swift */,
 			);
 			path = Cells;
@@ -286,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D1252B627F9E4620067A427 /* DescriptionTableViewCell.swift in Sources */,
 				9D7A5CBF280153AC0091CFCF /* JsonRocket.swift in Sources */,
 				9D669F5727ED8AE100525E6F /* MainRocketViewController.swift in Sources */,
 				9D669F5327ED8AE100525E6F /* AppDelegate.swift in Sources */,

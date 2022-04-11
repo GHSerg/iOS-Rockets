@@ -32,20 +32,18 @@
                                         <rect key="frame" x="0.0" y="0.0" width="412" height="248"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ms-Fd-E9S" userLabel="ImageRocket">
-                                                <rect key="frame" x="0.0" y="0.0" width="412" height="448"/>
-                                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                                <rect key="frame" x="-79" y="-140" width="570" height="627"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="570" id="Pqr-N6-BNI"/>
+                                                    <constraint firstAttribute="height" constant="627" id="Xbn-L7-dJn"/>
+                                                </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="6ms-Fd-E9S" firstAttribute="top" secondItem="rlK-kJ-9Sq" secondAttribute="top" id="5ac-UG-iYc"/>
-                                            <constraint firstAttribute="bottom" secondItem="6ms-Fd-E9S" secondAttribute="bottom" constant="-200" id="6RT-rR-NAW"/>
-                                            <constraint firstItem="6ms-Fd-E9S" firstAttribute="leading" secondItem="rlK-kJ-9Sq" secondAttribute="leading" id="FV6-RB-WBk"/>
-                                            <constraint firstItem="6ms-Fd-E9S" firstAttribute="leading" secondItem="rlK-kJ-9Sq" secondAttribute="leading" id="HgA-qj-4yY"/>
-                                            <constraint firstItem="6ms-Fd-E9S" firstAttribute="top" secondItem="rlK-kJ-9Sq" secondAttribute="top" id="S1j-Nt-AeI"/>
                                             <constraint firstAttribute="height" constant="248" id="ZfQ-nR-lO2"/>
-                                            <constraint firstAttribute="trailing" secondItem="6ms-Fd-E9S" secondAttribute="trailing" id="aUf-Pa-P0I"/>
-                                            <constraint firstAttribute="trailing" secondItem="6ms-Fd-E9S" secondAttribute="trailing" id="flF-cA-pPz"/>
+                                            <constraint firstItem="6ms-Fd-E9S" firstAttribute="top" secondItem="rlK-kJ-9Sq" secondAttribute="top" constant="-140" id="mN5-Br-5Pi"/>
+                                            <constraint firstItem="6ms-Fd-E9S" firstAttribute="centerX" secondItem="rlK-kJ-9Sq" secondAttribute="centerX" id="ugR-5w-zwz"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieV-0g-PoU" userLabel="NameSettingsRocketView">
@@ -104,8 +102,8 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="229.6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvK-Jd-cb1" userLabel="InfoValueCellLabel">
-                                                                    <rect key="frame" x="27.666666666666668" y="28" width="40.666666666666657" height="19.333333333333329"/>
-                                                                    <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                                    <rect key="frame" x="27.333333333333332" y="28" width="41.333333333333343" height="19.333333333333329"/>
+                                                                    <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -584,12 +582,6 @@
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

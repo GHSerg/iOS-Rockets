@@ -4,7 +4,7 @@
 //
 //  Created by Sergey Bodnar on 09.04.2022.
 //
-
+/*
 import Foundation
 import UIKit
 
@@ -62,3 +62,4 @@ struct Rocket {
         var burn_time_sec: Double
     }
 }
+*/
