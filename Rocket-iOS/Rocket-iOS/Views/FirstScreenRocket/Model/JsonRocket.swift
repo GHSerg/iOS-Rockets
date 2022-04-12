@@ -11,6 +11,7 @@ struct JsonRocket: Decodable {
     var flickr_images: [String?]
     
     var name: String?
+    var id: String?
     
     var height: HeightRocket?
     var diameter: DiameterRocket?

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LabGrotesque-Regular.ttf">
+            <string>LabGrotesque-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondScreenTableViewCell" rowHeight="116" id="KGk-i7-Jjw" customClass="SecondScreenTableViewCell" customModule="Rocket_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="116"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="116"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cK5-S3-DT6" userLabel="СontainerView">
+                        <rect key="frame" x="0.0" y="0.0" width="325" height="116"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iH0-g3-veu">
+                                <rect key="frame" x="0.0" y="0.0" width="325" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gu-hV-y0H">
+                                        <rect key="frame" x="24" y="24" width="277" height="52"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kbo-44-j1T">
+                                                <rect key="frame" x="0.0" y="0.0" width="225" height="52"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xcW-1L-JFe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="225" height="32.5"/>
+                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BU-Wq-5PZ">
+                                                        <rect key="frame" x="0.0" y="32.5" width="225" height="19.5"/>
+                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                        <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="xuU-J1-zVH">
+                                                <rect key="frame" x="225" y="0.0" width="52" height="52"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="52" id="b3v-0q-Jkt"/>
+                                                    <constraint firstAttribute="height" constant="52" id="djc-Tv-0rp"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="OWL-oo-HsE"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="8gu-hV-y0H" firstAttribute="leading" secondItem="iH0-g3-veu" secondAttribute="leading" constant="24" id="8BI-mk-cEU"/>
+                                    <constraint firstAttribute="height" constant="100" id="Eth-La-NXW"/>
+                                    <constraint firstAttribute="trailing" secondItem="8gu-hV-y0H" secondAttribute="trailing" constant="24" id="gEm-2J-cwa"/>
+                                    <constraint firstItem="8gu-hV-y0H" firstAttribute="centerY" secondItem="iH0-g3-veu" secondAttribute="centerY" id="wXa-nQ-07a"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iH0-g3-veu" secondAttribute="trailing" id="0DX-tb-6d0"/>
+                            <constraint firstItem="iH0-g3-veu" firstAttribute="leading" secondItem="cK5-S3-DT6" secondAttribute="leading" id="XPG-9l-WD4"/>
+                            <constraint firstAttribute="bottom" secondItem="iH0-g3-veu" secondAttribute="bottom" constant="16" id="qLs-g7-o7l"/>
+                            <constraint firstItem="iH0-g3-veu" firstAttribute="top" secondItem="cK5-S3-DT6" secondAttribute="top" id="syW-TX-iFp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="cK5-S3-DT6" secondAttribute="trailing" id="FPL-Xm-cUJ"/>
+                    <constraint firstItem="cK5-S3-DT6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KFC-40-DnK"/>
+                    <constraint firstItem="cK5-S3-DT6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eN7-VK-iZW"/>
+                    <constraint firstItem="cK5-S3-DT6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fqh-O1-DNu"/>
+                    <constraint firstAttribute="bottom" secondItem="cK5-S3-DT6" secondAttribute="bottom" id="to5-DA-es0"/>
+                    <constraint firstItem="cK5-S3-DT6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yZc-iH-66G"/>
+                    <constraint firstAttribute="trailing" secondItem="cK5-S3-DT6" secondAttribute="trailing" id="zij-nM-jnR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateRocket" destination="1BU-Wq-5PZ" id="IdE-Bg-Fh3"/>
+                <outlet property="imageRocket" destination="xuU-J1-zVH" id="Cqt-uu-TZw"/>
+                <outlet property="nameRocket" destination="xcW-1L-JFe" id="9IT-lD-m8g"/>
+                <outlet property="viewCell" destination="iH0-g3-veu" id="x9J-9i-62y"/>
+            </connections>
+            <point key="canvasLocation" x="132.60869565217394" y="99.107142857142847"/>
+        </tableViewCell>
+    </objects>
+</document>
