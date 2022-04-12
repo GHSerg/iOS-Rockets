@@ -10,7 +10,17 @@ import UIKit
 class MainRocketViewController: UIViewController {
     
     var rocket = 0
-    var rockets: [JsonRocket]?
+    var rockets: [JsonRocket]? {
+        didSet {
+            setData()
+        }
+    }
+    
+//    var labelChange: String = Model().callElements() {
+//           didSet {
+//               updateLable?()
+//           }
+//       }
 
     let countryDictionary = [
         "none": "Отсутствует в словаре",
@@ -59,7 +69,7 @@ class MainRocketViewController: UIViewController {
         
         setupLayout() // констрейнты, стеки
         
-        setData()
+
         //print (arrayTestInfotext[0][0] ?? "nil")
         
     }
@@ -77,6 +87,8 @@ class MainRocketViewController: UIViewController {
         guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .flipHorizontal
+        controller.idRocket = rockets?[rocket].id
+        controller.nameRocket = rockets?[rocket].name
         self.present(controller, animated: true, completion: nil)
     }
     

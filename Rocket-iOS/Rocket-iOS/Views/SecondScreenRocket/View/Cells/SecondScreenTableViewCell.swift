@@ -26,8 +26,9 @@ class SecondScreenTableViewCell: UITableViewCell {
         //nameSettingsRocketView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
-    func configure (name: String, date: String) {
+    func configure (name: String, date: String, image: String) {
         nameRocket.text = name
         dateRocket.text = date
+        imageRocket.image = UIImage(named: image)
     }
 }
