@@ -7,8 +7,8 @@
 
 import UIKit
 
-class MainRocketViewController: UIViewController {
-    
+class MainRocketViewController: UIViewController, ThirdViewControllerDelegate {
+
     var rocket = 0
     var rockets: [JsonRocket]? {
         didSet {
@@ -26,6 +26,15 @@ class MainRocketViewController: UIViewController {
         "none": "Отсутствует в словаре",
         "Republic of the Marshall Islands": "Маршалловы Острова",
         "United States": "США"
+    ]
+    
+   // var measurementValuesInfoRocket = ["ft", "ft", "lb", "lb"]
+    
+    var measurementValuesInfoRocketDef = [
+        ["name": "Высота", "unit": "f"],
+        ["name": "Диаметр", "unit": "ft"],
+        ["name": "Масса", "unit": "kg"],
+        ["name": "Нагрузка", "unit": "lb"]
     ]
     
     var infoRocket = [
@@ -94,7 +103,13 @@ class MainRocketViewController: UIViewController {
     
     @IBAction func settingsActionRocketButton(_ sender: Any) {
         
-        setData()
+        guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "ThirdViewController") as? ThirdViewController else { return }
+//                controller.modalPresentationStyle = .fullScreen
+//                controller.modalTransitionStyle = .flipHorizontal
+//                controller.idRocket = rockets?[rocket].id
+//                controller.nameRocket = rockets?[rocket].name
+        controller.delegate = self
+        self.present(controller, animated: true, completion: nil)
     }
 }
 
@@ -104,22 +119,18 @@ extension MainRocketViewController {
     
     func setData () {
         
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
         
-        rocket += 1
+        
         if rocket == infoRocket.count { rocket = 0 }
         
-        infoRocket[0]["value"] = formatter.string(for: rockets?[rocket].height?.feet ?? 0)
-        infoRocket[1]["value"] = formatter.string(for: rockets?[rocket].diameter?.feet ?? 0)
-        infoRocket[2]["value"] = formatter.string(for: rockets?[rocket].mass?.lb ?? 0)
-        infoRocket[3]["value"] = formatter.string(for: rockets?[rocket].payload_weights.first??.lb ?? 0)
+        setDataInfoRocket(measurementValuesInfoRocket: measurementValuesInfoRocketDef)
 
-        guard let url = URL(string: (((rockets?[rocket].flickr_images.randomElement()) ?? "https://farm1.staticflickr.com/745/32394687645_a9c54a34ef_b.jpg") ?? "https://farm1.staticflickr.com/745/32394687645_a9c54a34ef_b.jpg")) else {
-            return
-        }
+
+        guard let url = URL(string: (((rockets?[rocket].flickr_images.randomElement()) ?? "none.png") ?? "none.png")) else { return }
         rocketImageView.load(url: url)
         nameRocketLabel.text = rockets?[rocket].name
+        
+
         
         let formatterDate = DateFormatter()
         let timestamp = rockets?[rocket].first_flight ?? "2000-12-01"
@@ -138,6 +149,46 @@ extension MainRocketViewController {
         enginesSecondStageLabel.text = ("\(rockets?[rocket].second_stage?.engines ?? 0)")
         fuelSecondStageLabel.text = ("\(rockets?[rocket].second_stage?.fuel_amount_tons ?? 0)")
         burnSecSecondStageLabel.text = ("\(rockets?[rocket].second_stage?.burn_time_sec ?? 0)")
+        
+        //rocket += 1
+    }
+    
+    func setDataInfoRocket (measurementValuesInfoRocket: [[String : String]])
+    {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        
+        measurementValuesInfoRocket.enumerated().forEach { index, measurementValues in
+            infoRocket[index]["unit"] = measurementValues["unit"]
+            
+            switch measurementValues["name"] {
+                
+            case "Высота":
+                measurementValues["unit"] == "ft"
+                ? infoRocket[index]["value"] = formatter.string(for: rockets?[rocket].height?.feet ?? 0)
+                : (infoRocket[index]["value"] = formatter.string(for: rockets?[rocket].height?.meters ?? 0))
+                
+            case "Диаметр":
+                measurementValues["unit"] == "ft"
+                ? infoRocket[index]["value"] = formatter.string(for: rockets?[rocket].diameter?.feet ?? 0)
+                : (infoRocket[index]["value"] = formatter.string(for: rockets?[rocket].diameter?.meters ?? 0))
+                
+            case "Масса":
+                measurementValues["unit"] == "lb"
+                ? infoRocket[index]["value"] = formatter.string(for: rockets?[rocket].mass?.lb ?? 0)
+                : (infoRocket[index]["value"] = formatter.string(for: rockets?[rocket].mass?.kg ?? 0))
+
+            case "Нагрузка":
+                measurementValues["unit"] == "lb"
+                ? infoRocket[index]["value"] = formatter.string(for: rockets?[rocket].payload_weights.first??.lb ?? 0)
+                : (infoRocket[index]["value"] = formatter.string(for: rockets?[rocket].payload_weights.last??.kg ?? 0))
+                
+
+            case .none: break
+
+            case .some(_): break
+            }
+        }
         
         infoCollectionView.reloadData()
     }
