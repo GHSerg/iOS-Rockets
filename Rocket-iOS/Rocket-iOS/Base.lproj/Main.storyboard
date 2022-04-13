@@ -686,6 +686,193 @@
             </objects>
             <point key="canvasLocation" x="796" y="-95.320197044334975"/>
         </scene>
+        <!--Third View Controller-->
+        <scene sceneID="uCF-Us-LLU">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="ECv-sd-cVQ" customClass="ThirdViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VTH-7e-rZI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3K6-J2-1Bt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qq-uz-CH8">
+                                        <rect key="frame" x="24" y="18" width="327" height="22"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEQ-PM-GpW" userLabel="Spacer">
+                                                <rect key="frame" x="0.0" y="0.0" width="88.333333333333329" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF2-bF-cdS">
+                                                <rect key="frame" x="88.333333333333329" y="0.0" width="150.33333333333337" height="22"/>
+                                                <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnd-qh-cpH">
+                                                <rect key="frame" x="238.66666666666671" y="0.0" width="88.333333333333343" height="22"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Закрыть">
+                                                    <fontDescription key="titleFontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="backButton:" destination="ECv-sd-cVQ" eventType="touchUpInside" id="mnn-sC-0Oi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TF2-bF-cdS" firstAttribute="centerX" secondItem="6qq-uz-CH8" secondAttribute="centerX" id="N0P-wZ-S2T"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6qq-uz-CH8" secondAttribute="trailing" constant="24" id="2eb-3E-ndo"/>
+                                    <constraint firstAttribute="height" constant="56" id="EdX-hK-PTs"/>
+                                    <constraint firstItem="6qq-uz-CH8" firstAttribute="leading" secondItem="3K6-J2-1Bt" secondAttribute="leading" constant="24" id="HY7-vw-P2s"/>
+                                    <constraint firstItem="6qq-uz-CH8" firstAttribute="top" secondItem="3K6-J2-1Bt" secondAttribute="top" constant="18" id="MaP-8n-tui"/>
+                                    <constraint firstAttribute="bottom" secondItem="6qq-uz-CH8" secondAttribute="bottom" constant="16" id="ULA-pK-dC4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RhQ-jX-0sA">
+                                <rect key="frame" x="0.0" y="56" width="375" height="756"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QhA-Ub-k6a">
+                                        <rect key="frame" x="28" y="64" width="316" height="232"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lQ4-nO-EmW">
+                                                <rect key="frame" x="0.0" y="0.0" width="316" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Высота" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIZ-r4-9ym">
+                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="40"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                        <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="hTY-ZO-grY">
+                                                        <rect key="frame" x="201" y="0.0" width="115" height="41"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="115" id="boY-JF-Te7"/>
+                                                        </constraints>
+                                                        <segments>
+                                                            <segment title=""/>
+                                                            <segment title=""/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="heightChoice:" destination="ECv-sd-cVQ" eventType="valueChanged" id="lT3-b7-Wxe"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="cjv-bi-cFH"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="3vo-Ak-wV2">
+                                                <rect key="frame" x="0.0" y="64" width="316" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Диаметр" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeF-yL-1il">
+                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="40"/>
+                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                        <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="bmK-Vv-Oon">
+                                                        <rect key="frame" x="201" y="0.0" width="115" height="41"/>
+                                                        <segments>
+                                                            <segment title=""/>
+                                                            <segment title=""/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="wHd-jP-45o">
+                                                <rect key="frame" x="0.0" y="128" width="316" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Масса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88N-oV-MCu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="40"/>
+                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                        <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="5LE-qJ-qZW">
+                                                        <rect key="frame" x="201" y="0.0" width="115" height="41"/>
+                                                        <segments>
+                                                            <segment title=""/>
+                                                            <segment title=""/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="nFi-oA-rCB">
+                                                <rect key="frame" x="0.0" y="192" width="316" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Полезная нагрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-qi-Tcc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="40"/>
+                                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
+                                                        <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="1bb-Xi-FOv">
+                                                        <rect key="frame" x="201" y="0.0" width="115" height="41"/>
+                                                        <segments>
+                                                            <segment title=""/>
+                                                            <segment title=""/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wHd-jP-45o" firstAttribute="height" secondItem="lQ4-nO-EmW" secondAttribute="height" id="25D-E4-VYP"/>
+                                            <constraint firstItem="lQ4-nO-EmW" firstAttribute="top" secondItem="QhA-Ub-k6a" secondAttribute="top" id="4Ql-wy-nTq"/>
+                                            <constraint firstItem="nFi-oA-rCB" firstAttribute="leading" secondItem="lQ4-nO-EmW" secondAttribute="leading" id="4Ww-hO-Ykw"/>
+                                            <constraint firstItem="1bb-Xi-FOv" firstAttribute="width" secondItem="hTY-ZO-grY" secondAttribute="width" id="Btl-Lg-UzZ"/>
+                                            <constraint firstItem="3vo-Ak-wV2" firstAttribute="width" secondItem="lQ4-nO-EmW" secondAttribute="width" id="IBL-Bu-o0h"/>
+                                            <constraint firstItem="5LE-qJ-qZW" firstAttribute="width" secondItem="bmK-Vv-Oon" secondAttribute="width" id="IL6-Jk-SvH"/>
+                                            <constraint firstItem="nFi-oA-rCB" firstAttribute="height" secondItem="lQ4-nO-EmW" secondAttribute="height" id="PwV-gQ-SwC"/>
+                                            <constraint firstItem="nFi-oA-rCB" firstAttribute="width" secondItem="lQ4-nO-EmW" secondAttribute="width" id="X7u-MH-nhh"/>
+                                            <constraint firstItem="wHd-jP-45o" firstAttribute="leading" secondItem="lQ4-nO-EmW" secondAttribute="leading" id="cAY-TN-Juk"/>
+                                            <constraint firstItem="3vo-Ak-wV2" firstAttribute="leading" secondItem="lQ4-nO-EmW" secondAttribute="leading" id="d2s-9j-dec"/>
+                                            <constraint firstItem="3vo-Ak-wV2" firstAttribute="height" secondItem="lQ4-nO-EmW" secondAttribute="height" id="ghu-1X-50J"/>
+                                            <constraint firstItem="wHd-jP-45o" firstAttribute="width" secondItem="lQ4-nO-EmW" secondAttribute="width" id="mUd-6A-xW6"/>
+                                            <constraint firstAttribute="trailing" secondItem="lQ4-nO-EmW" secondAttribute="trailing" id="qT0-Q8-zTA"/>
+                                            <constraint firstItem="bmK-Vv-Oon" firstAttribute="width" secondItem="hTY-ZO-grY" secondAttribute="width" id="sm6-NR-PPb"/>
+                                            <constraint firstItem="lQ4-nO-EmW" firstAttribute="leading" secondItem="QhA-Ub-k6a" secondAttribute="leading" id="vby-A9-a3M"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="QhA-Ub-k6a" firstAttribute="leading" secondItem="RhQ-jX-0sA" secondAttribute="leading" constant="28" id="1BI-RX-SuF"/>
+                                    <constraint firstAttribute="trailing" secondItem="QhA-Ub-k6a" secondAttribute="trailing" constant="31" id="cfS-A1-c6Z"/>
+                                    <constraint firstItem="QhA-Ub-k6a" firstAttribute="top" secondItem="RhQ-jX-0sA" secondAttribute="top" constant="64" id="p1l-GB-s1U"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yUj-R7-7Vj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3K6-J2-1Bt" firstAttribute="trailing" secondItem="yUj-R7-7Vj" secondAttribute="trailing" id="FGw-LV-ETI"/>
+                            <constraint firstAttribute="bottom" secondItem="RhQ-jX-0sA" secondAttribute="bottom" id="Ifg-eq-JjO"/>
+                            <constraint firstItem="3K6-J2-1Bt" firstAttribute="leading" secondItem="yUj-R7-7Vj" secondAttribute="leading" id="PLv-Oo-Jl7"/>
+                            <constraint firstItem="RhQ-jX-0sA" firstAttribute="top" secondItem="3K6-J2-1Bt" secondAttribute="bottom" id="VeO-wf-aZ7"/>
+                            <constraint firstItem="3K6-J2-1Bt" firstAttribute="top" secondItem="VTH-7e-rZI" secondAttribute="top" id="X5C-mB-lUH"/>
+                            <constraint firstItem="RhQ-jX-0sA" firstAttribute="leading" secondItem="3K6-J2-1Bt" secondAttribute="leading" id="osH-AA-dmG"/>
+                            <constraint firstItem="RhQ-jX-0sA" firstAttribute="width" secondItem="3K6-J2-1Bt" secondAttribute="width" id="s0C-Sa-Aaj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heightInfoRocket" destination="hTY-ZO-grY" id="6jN-k5-8Ss"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ang-mm-Xc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1680.8" y="-83.497536945812811"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>

@@ -19,6 +19,8 @@
 		9D669F5F27ED8AE200525E6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D669F5D27ED8AE200525E6F /* LaunchScreen.storyboard */; };
 		9D7A5CBD280149C20091CFCF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A5CBC280149C20091CFCF /* MainViewModel.swift */; };
 		9D7A5CBF280153AC0091CFCF /* JsonRocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A5CBE280153AC0091CFCF /* JsonRocket.swift */; };
+		9DB5210C28069261006B1F09 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5210B28069261006B1F09 /* ThirdViewController.swift */; };
+		9DB5210E2806A08C006B1F09 /* InfoRocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5210D2806A08C006B1F09 /* InfoRocket.swift */; };
 		9DE5DC4927FC5651004B7DBD /* InfoRocketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5DC4827FC5651004B7DBD /* InfoRocketCollectionViewCell.swift */; };
 		9DE6EC9127FFFC86007C5AB2 /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6EC9027FFFC86007C5AB2 /* LabGrotesque-Regular.ttf */; };
 		9DE6EC9327FFFC8F007C5AB2 /* LabGrotesque-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6EC9227FFFC8F007C5AB2 /* LabGrotesque-Bold.ttf */; };
@@ -39,6 +41,8 @@
 		9D669F6027ED8AE200525E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D7A5CBC280149C20091CFCF /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9D7A5CBE280153AC0091CFCF /* JsonRocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRocket.swift; sourceTree = "<group>"; };
+		9DB5210B28069261006B1F09 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		9DB5210D2806A08C006B1F09 /* InfoRocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRocket.swift; sourceTree = "<group>"; };
 		9DE5DC4827FC5651004B7DBD /* InfoRocketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRocketCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DE6EC9027FFFC86007C5AB2 /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
 		9DE6EC9227FFFC8F007C5AB2 /* LabGrotesque-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Bold.ttf"; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 		9DE6EC9B280001B6007C5AB2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9DB5210B28069261006B1F09 /* ThirdViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 		9DE6EC9C280001C2007C5AB2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9DB5210D2806A08C006B1F09 /* InfoRocket.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,11 +312,13 @@
 			files = (
 				9D7A5CBF280153AC0091CFCF /* JsonRocket.swift in Sources */,
 				9D20171D280439AB00395E04 /* SecondScreenTableViewCell.swift in Sources */,
+				9DB5210C28069261006B1F09 /* ThirdViewController.swift in Sources */,
 				9D669F5727ED8AE100525E6F /* MainRocketViewController.swift in Sources */,
 				9D669F5327ED8AE100525E6F /* AppDelegate.swift in Sources */,
 				9D2017202805517A00395E04 /* SecondViewJsonRocket.swift in Sources */,
 				9DE5DC4927FC5651004B7DBD /* InfoRocketCollectionViewCell.swift in Sources */,
 				9D201719280422AF00395E04 /* SecondViewController.swift in Sources */,
+				9DB5210E2806A08C006B1F09 /* InfoRocket.swift in Sources */,
 				9D669F5527ED8AE100525E6F /* SceneDelegate.swift in Sources */,
 				9D7A5CBD280149C20091CFCF /* MainViewModel.swift in Sources */,
 			);
