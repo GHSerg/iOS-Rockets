@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Main Rocket View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainRocketViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="FirstViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="412" height="1168"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,13 +102,13 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="229.6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvK-Jd-cb1" userLabel="InfoValueCellLabel">
-                                                                    <rect key="frame" x="27.333333333333332" y="28" width="41.333333333333343" height="19.333333333333329"/>
+                                                                    <rect key="frame" x="28.000000000000004" y="28" width="40.333333333333343" height="18.666666666666671"/>
                                                                     <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-y2-5Qh" userLabel="InfoValueNameCellLabel">
-                                                                    <rect key="frame" x="31" y="47.333333333333336" width="34" height="17.000000000000007"/>
+                                                                    <rect key="frame" x="31.000000000000004" y="46.666666666666664" width="34.333333333333343" height="16.333333333333336"/>
                                                                     <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="14"/>
                                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -157,13 +157,13 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="348" height="24"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Первый запуск" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zde-Ro-deb" userLabel="FirstFlightLabel">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="229.66666666666666" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="224.33333333333334" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 февраля, 2018" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWO-Lg-q3i" userLabel="DataLabel">
-                                                                        <rect key="frame" x="229.66666666666671" y="0.0" width="118.33333333333334" height="24"/>
+                                                                        <rect key="frame" x="224.33333333333329" y="0.0" width="123.66666666666666" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -194,13 +194,13 @@
                                                                 <rect key="frame" x="0.0" y="80" width="348" height="24"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стоимость запуска" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLQ-rM-i38" userLabel="CostLaunchLabel">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="286.33333333333331" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="287.66666666666669" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$90 млн" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niZ-a9-uOO" userLabel="CostLabel">
-                                                                        <rect key="frame" x="286.33333333333331" y="0.0" width="61.666666666666686" height="24"/>
+                                                                        <rect key="frame" x="287.66666666666669" y="0.0" width="60.333333333333314" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -243,13 +243,13 @@
                                                                 <rect key="frame" x="0.0" y="40" width="348" height="24"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество двигателей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPO-Ya-m57" userLabel="FirstEnginesLabel">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="293.33333333333331" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="294" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mld-vt-AMb" userLabel="FirstNumberEnginesLabel">
-                                                                        <rect key="frame" x="293.33333333333331" y="0.0" width="18.666666666666686" height="24"/>
+                                                                        <rect key="frame" x="294" y="0.0" width="18" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -270,13 +270,13 @@
                                                                 <rect key="frame" x="0.0" y="80" width="348" height="24"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество топлива" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCC-fP-3yB" userLabel="FirstCostLaunchLabel">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="262.33333333333331" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="263.66666666666669" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="308,6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B19-7P-oMZ" userLabel="FirstCostLabel">
-                                                                        <rect key="frame" x="270.33333333333331" y="0.0" width="41.666666666666686" height="24"/>
+                                                                        <rect key="frame" x="271.66666666666669" y="0.0" width="40.333333333333314" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -297,13 +297,13 @@
                                                                 <rect key="frame" x="0.0" y="120" width="348" height="24"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время сгорания" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3Z-fJ-sCA" userLabel="FirstBurnTimeLabel">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="276.33333333333331" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="277" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="593" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xP-2X-9l0" userLabel="FirstBurnLabel">
-                                                                        <rect key="frame" x="284.33333333333331" y="0.0" width="27.666666666666686" height="24"/>
+                                                                        <rect key="frame" x="285" y="0.0" width="27" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -356,13 +356,13 @@
                                                                 <rect key="frame" x="0.0" y="40" width="348" height="24"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество двигателей" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyo-tO-18T" userLabel="SecondEnginesLabel">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="304.33333333333331" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jd-dX-J5O" userLabel="SecondNumberEnginesLabel">
-                                                                        <rect key="frame" x="304.33333333333331" y="0.0" width="7.6666666666666856" height="24"/>
+                                                                        <rect key="frame" x="303" y="0.0" width="9" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -383,13 +383,13 @@
                                                                 <rect key="frame" x="0.0" y="80" width="348" height="24"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество топлива" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spG-54-hUX" userLabel="SecondCostLaunchLabel">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="262.33333333333331" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="263.66666666666669" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="243,2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRC-7k-YDF" userLabel="SecondCostLabel">
-                                                                        <rect key="frame" x="270.33333333333331" y="0.0" width="41.666666666666686" height="24"/>
+                                                                        <rect key="frame" x="271.66666666666669" y="0.0" width="40.333333333333314" height="24"/>
                                                                         <fontDescription key="fontDescription" name="LabGrotesque-Bold" family="Lab Grotesque" pointSize="16"/>
                                                                         <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -606,13 +606,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arm-Cg-2Np" userLabel="RocketNameTitleLabel">
-                                                <rect key="frame" x="152" y="0.0" width="39" height="24"/>
+                                                <rect key="frame" x="152" y="0.0" width="39.333333333333343" height="24"/>
                                                 <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                 <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMK-7A-hGd" userLabel="Spacer">
-                                                <rect key="frame" x="191" y="0.0" width="152" height="24"/>
+                                                <rect key="frame" x="191.33333333333337" y="0.0" width="151.66666666666663" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

@@ -1,10 +1,3 @@
-//
-//  JsonRocket.swift
-//  Rocket-iOS
-//
-//  Created by Sergey Bodnar on 09.04.2022.
-//
-
 import Foundation
 
 struct JsonRocket: Decodable {
@@ -57,29 +50,3 @@ struct SecondStage: Decodable {
     var fuel_amount_tons: Double?
     var burn_time_sec: Double?
 }
-
-func request(urlString: String, completion: @escaping ([JsonRocket]?, Error?) -> Void) {
-    guard let url = URL(string: urlString) else {
-        return
-    }
-    
-    var request = URLRequest(url: url)
-    request.httpMethod = "GET"
-    
-    URLSession.shared.dataTask(with: request) { data, response, error in
-        DispatchQueue.main.async {
-            guard error == nil, let data = data else { return }
-
-            do {
-                let json = try JSONDecoder().decode([JsonRocket].self, from: data)
-                completion (json, nil)
-                print(type(of: json))
-            } catch {
-                print(error)
-                completion (nil, error)
-            }
-        }
-
-    }.resume()
-}
-
