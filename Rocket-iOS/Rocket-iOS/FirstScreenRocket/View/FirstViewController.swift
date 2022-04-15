@@ -4,7 +4,7 @@ class FirstViewController: UIViewController {
     
     var descriptionDataRocket = [DescriptionDataRocket]()
     var infoDataRocket = [InfoDataRocket]()
-
+    
     @IBOutlet weak var infoRocketView: UIView!
     @IBOutlet weak var infoCollectionView: UICollectionView!
     @IBOutlet weak var nameSettingsRocketView: UIView!
@@ -42,17 +42,18 @@ class FirstViewController: UIViewController {
     
     @IBAction func launchesRocketButton(_ sender: Any) {
         guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .flipHorizontal
-      //  controller.idRocket = rockets?[rocket].id
-      //  controller.nameRocket = rockets?[rocket].name
-        self.present(controller, animated: true, completion: nil)
+        //controller.modalPresentationStyle = .fullScreen
+        //controller.modalTransitionStyle = .flipHorizontal
+        //  controller.idRocket = rockets?[rocket].id
+        //  controller.nameRocket = rockets?[rocket].name
+        // self.present(controller, animated: true, completion: nil)
     }
     
     @IBAction func settingsActionRocketButton(_ sender: Any) {
         
-        guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "ThirdViewController") as? ThirdViewController else { return }
+       // guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController else { return }
        // controller.delegate = self
+        let controller = SettingsBuilder.createSettingsViewController()
         self.present(controller, animated: true, completion: nil)
     }
     
@@ -96,7 +97,7 @@ extension FirstViewController {
 
 extension FirstViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
+        
         return 4 //infoDataRocket.count
     }
     
@@ -120,17 +121,17 @@ extension FirstViewController {
 }
 
 extension UIImageView {
-//    func load(url: URL) {
-//        DispatchQueue.global().async { [weak self] in
-//            if let data = try? Data(contentsOf: url) {
-//                if let image = UIImage(data: data) {
-//                    DispatchQueue.main.async {
-//                        self?.image = image
-//                    }
-//                }
-//            }
-//        }
-//    }
+    //    func load(url: URL) {
+    //        DispatchQueue.global().async { [weak self] in
+    //            if let data = try? Data(contentsOf: url) {
+    //                if let image = UIImage(data: data) {
+    //                    DispatchQueue.main.async {
+    //                        self?.image = image
+    //                    }
+    //                }
+    //            }
+    //        }
+    //    }
 }
 
 //cell.configure(nameCell: infoDataRocket[indexPath.item]["name"] ?? "none",

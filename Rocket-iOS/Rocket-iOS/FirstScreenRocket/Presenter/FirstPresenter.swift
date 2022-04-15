@@ -1,6 +1,6 @@
 import Foundation
 
-class FirstViewModel {
+class FirstPresenter {
     var dataRocketModel = DataRocketModel()
     var jsonModel = JsonModel()
     

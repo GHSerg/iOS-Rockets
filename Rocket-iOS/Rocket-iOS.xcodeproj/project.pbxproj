@@ -10,9 +10,8 @@
 		9D201719280422AF00395E04 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D201718280422AF00395E04 /* SecondViewController.swift */; };
 		9D20171D280439AB00395E04 /* SecondScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D20171B280439AB00395E04 /* SecondScreenTableViewCell.swift */; };
 		9D20171E280439AB00395E04 /* SecondScreenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D20171C280439AB00395E04 /* SecondScreenTableViewCell.xib */; };
-		9D2017202805517A00395E04 /* SecondJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D20171F2805517A00395E04 /* SecondJSON.swift */; };
-		9D38ACF7280872B8002F08AF /* ThirdDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D38ACF6280872B8002F08AF /* ThirdDataModel.swift */; };
-		9D38ACF9280872EC002F08AF /* ThirdPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D38ACF8280872EC002F08AF /* ThirdPresenter.swift */; };
+		9D38ACF7280872B8002F08AF /* SettingsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D38ACF6280872B8002F08AF /* SettingsDataModel.swift */; };
+		9D38ACF9280872EC002F08AF /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D38ACF8280872EC002F08AF /* SettingsPresenter.swift */; };
 		9D669F5327ED8AE100525E6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D669F5227ED8AE100525E6F /* AppDelegate.swift */; };
 		9D669F5527ED8AE100525E6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D669F5427ED8AE100525E6F /* SceneDelegate.swift */; };
 		9D669F5727ED8AE100525E6F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D669F5627ED8AE100525E6F /* FirstViewController.swift */; };
@@ -20,15 +19,13 @@
 		9D669F5C27ED8AE200525E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D669F5B27ED8AE200525E6F /* Assets.xcassets */; };
 		9D669F5F27ED8AE200525E6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D669F5D27ED8AE200525E6F /* LaunchScreen.storyboard */; };
 		9D7A5CBF280153AC0091CFCF /* JsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A5CBE280153AC0091CFCF /* JsonModel.swift */; };
-		9DB5210C28069261006B1F09 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5210B28069261006B1F09 /* ThirdViewController.swift */; };
-		9DB5210E2806A08C006B1F09 /* ThirdData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5210D2806A08C006B1F09 /* ThirdData.swift */; };
+		9D8C611B2809E18C000852CE /* SettingsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C611A2809E18C000852CE /* SettingsBuilder.swift */; };
+		9DB5210C28069261006B1F09 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5210B28069261006B1F09 /* SettingsViewController.swift */; };
 		9DB52112280743C5006B1F09 /* FirstPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB52111280743C5006B1F09 /* FirstPresenter.swift */; };
 		9DB5211428075242006B1F09 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5211328075242006B1F09 /* JSON.swift */; };
 		9DB52116280752FE006B1F09 /* DataRocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB52115280752FE006B1F09 /* DataRocket.swift */; };
 		9DB5211828075323006B1F09 /* DataRocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5211728075323006B1F09 /* DataRocketModel.swift */; };
 		9DB5211D280866C5006B1F09 /* SecondJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5211C280866C5006B1F09 /* SecondJsonModel.swift */; };
-		9DB5212028086A2E006B1F09 /* SecondData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5211F28086A2E006B1F09 /* SecondData.swift */; };
-		9DB5212228086A59006B1F09 /* SeconDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5212128086A59006B1F09 /* SeconDataModel.swift */; };
 		9DB5212428086AB3006B1F09 /* SecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB5212328086AB3006B1F09 /* SecondPresenter.swift */; };
 		9DE5DC4927FC5651004B7DBD /* InfoRocketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5DC4827FC5651004B7DBD /* InfoRocketCollectionViewCell.swift */; };
 		9DE6EC9127FFFC86007C5AB2 /* LabGrotesque-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6EC9027FFFC86007C5AB2 /* LabGrotesque-Regular.ttf */; };
@@ -39,9 +36,8 @@
 		9D201718280422AF00395E04 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9D20171B280439AB00395E04 /* SecondScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenTableViewCell.swift; sourceTree = "<group>"; };
 		9D20171C280439AB00395E04 /* SecondScreenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondScreenTableViewCell.xib; sourceTree = "<group>"; };
-		9D20171F2805517A00395E04 /* SecondJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondJSON.swift; sourceTree = "<group>"; };
-		9D38ACF6280872B8002F08AF /* ThirdDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdDataModel.swift; sourceTree = "<group>"; };
-		9D38ACF8280872EC002F08AF /* ThirdPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPresenter.swift; sourceTree = "<group>"; };
+		9D38ACF6280872B8002F08AF /* SettingsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataModel.swift; sourceTree = "<group>"; };
+		9D38ACF8280872EC002F08AF /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		9D669F4F27ED8AE100525E6F /* Rocket-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rocket-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D669F5227ED8AE100525E6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D669F5427ED8AE100525E6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,15 +47,13 @@
 		9D669F5E27ED8AE200525E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D669F6027ED8AE200525E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D7A5CBE280153AC0091CFCF /* JsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModel.swift; sourceTree = "<group>"; };
-		9DB5210B28069261006B1F09 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		9DB5210D2806A08C006B1F09 /* ThirdData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdData.swift; sourceTree = "<group>"; };
+		9D8C611A2809E18C000852CE /* SettingsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBuilder.swift; sourceTree = "<group>"; };
+		9DB5210B28069261006B1F09 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9DB52111280743C5006B1F09 /* FirstPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPresenter.swift; sourceTree = "<group>"; };
 		9DB5211328075242006B1F09 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		9DB52115280752FE006B1F09 /* DataRocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRocket.swift; sourceTree = "<group>"; };
 		9DB5211728075323006B1F09 /* DataRocketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRocketModel.swift; sourceTree = "<group>"; };
 		9DB5211C280866C5006B1F09 /* SecondJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondJsonModel.swift; sourceTree = "<group>"; };
-		9DB5211F28086A2E006B1F09 /* SecondData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondData.swift; sourceTree = "<group>"; };
-		9DB5212128086A59006B1F09 /* SeconDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeconDataModel.swift; sourceTree = "<group>"; };
 		9DB5212328086AB3006B1F09 /* SecondPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPresenter.swift; sourceTree = "<group>"; };
 		9DE5DC4827FC5651004B7DBD /* InfoRocketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRocketCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DE6EC9027FFFC86007C5AB2 /* LabGrotesque-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LabGrotesque-Regular.ttf"; sourceTree = "<group>"; };
@@ -134,7 +128,7 @@
 				9D38ACF528086E78002F08AF /* App */,
 				9DE6EC9427FFFEC7007C5AB2 /* FirstScreenRocket */,
 				9DE6EC95280000EC007C5AB2 /* SecondScreenRocket */,
-				9DE6EC9628000144007C5AB2 /* ThirdScreenRocket */,
+				9DE6EC9628000144007C5AB2 /* SettingsScreenRocket */,
 				9D2C39DF27FB2D8C00FCB361 /* Fonts */,
 				9DE6EC8B27FFF873007C5AB2 /* Resources */,
 				9D669F5827ED8AE100525E6F /* Main.storyboard */,
@@ -166,19 +160,9 @@
 		9DB5211B28086689006B1F09 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				9D20171F2805517A00395E04 /* SecondJSON.swift */,
 				9DB5211C280866C5006B1F09 /* SecondJsonModel.swift */,
 			);
 			path = JSON;
-			sourceTree = "<group>";
-		};
-		9DB5211E280866D7006B1F09 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				9DB5211F28086A2E006B1F09 /* SecondData.swift */,
-				9DB5212128086A59006B1F09 /* SeconDataModel.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		9DE6EC8827FFF770007C5AB2 /* Model */ = {
@@ -234,14 +218,15 @@
 			path = SecondScreenRocket;
 			sourceTree = "<group>";
 		};
-		9DE6EC9628000144007C5AB2 /* ThirdScreenRocket */ = {
+		9DE6EC9628000144007C5AB2 /* SettingsScreenRocket */ = {
 			isa = PBXGroup;
 			children = (
+				9D8C611A2809E18C000852CE /* SettingsBuilder.swift */,
 				9DE6EC9C280001C2007C5AB2 /* Model */,
 				9DE6EC9B280001B6007C5AB2 /* View */,
 				9DE6EC9A280001A5007C5AB2 /* Presenter */,
 			);
-			path = ThirdScreenRocket;
+			path = SettingsScreenRocket;
 			sourceTree = "<group>";
 		};
 		9DE6EC9728000179007C5AB2 /* Presenter */ = {
@@ -264,7 +249,6 @@
 		9DE6EC9928000199007C5AB2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9DB5211E280866D7006B1F09 /* Data */,
 				9DB5211B28086689006B1F09 /* JSON */,
 			);
 			path = Model;
@@ -273,7 +257,7 @@
 		9DE6EC9A280001A5007C5AB2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				9D38ACF8280872EC002F08AF /* ThirdPresenter.swift */,
+				9D38ACF8280872EC002F08AF /* SettingsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -281,7 +265,7 @@
 		9DE6EC9B280001B6007C5AB2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9DB5210B28069261006B1F09 /* ThirdViewController.swift */,
+				9DB5210B28069261006B1F09 /* SettingsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,8 +273,7 @@
 		9DE6EC9C280001C2007C5AB2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9DB5210D2806A08C006B1F09 /* ThirdData.swift */,
-				9D38ACF6280872B8002F08AF /* ThirdDataModel.swift */,
+				9D38ACF6280872B8002F08AF /* SettingsDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -373,22 +356,19 @@
 				9D7A5CBF280153AC0091CFCF /* JsonModel.swift in Sources */,
 				9DB5211428075242006B1F09 /* JSON.swift in Sources */,
 				9D20171D280439AB00395E04 /* SecondScreenTableViewCell.swift in Sources */,
-				9DB5210C28069261006B1F09 /* ThirdViewController.swift in Sources */,
+				9DB5210C28069261006B1F09 /* SettingsViewController.swift in Sources */,
 				9D669F5727ED8AE100525E6F /* FirstViewController.swift in Sources */,
 				9D669F5327ED8AE100525E6F /* AppDelegate.swift in Sources */,
-				9D2017202805517A00395E04 /* SecondJSON.swift in Sources */,
+				9D8C611B2809E18C000852CE /* SettingsBuilder.swift in Sources */,
 				9DB52116280752FE006B1F09 /* DataRocket.swift in Sources */,
 				9DE5DC4927FC5651004B7DBD /* InfoRocketCollectionViewCell.swift in Sources */,
 				9DB5212428086AB3006B1F09 /* SecondPresenter.swift in Sources */,
-				9D38ACF7280872B8002F08AF /* ThirdDataModel.swift in Sources */,
+				9D38ACF7280872B8002F08AF /* SettingsDataModel.swift in Sources */,
 				9DB52112280743C5006B1F09 /* FirstPresenter.swift in Sources */,
 				9D201719280422AF00395E04 /* SecondViewController.swift in Sources */,
-				9DB5210E2806A08C006B1F09 /* ThirdData.swift in Sources */,
 				9DB5211828075323006B1F09 /* DataRocketModel.swift in Sources */,
 				9D669F5527ED8AE100525E6F /* SceneDelegate.swift in Sources */,
-				9DB5212228086A59006B1F09 /* SeconDataModel.swift in Sources */,
-				9D38ACF9280872EC002F08AF /* ThirdPresenter.swift in Sources */,
-				9DB5212028086A2E006B1F09 /* SecondData.swift in Sources */,
+				9D38ACF9280872EC002F08AF /* SettingsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

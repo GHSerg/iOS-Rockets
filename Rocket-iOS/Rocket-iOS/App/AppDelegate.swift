@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Rocket-iOS
-//
-//  Created by Sergey Bodnar on 25.03.2022.
-//
-
 import UIKit
 
 @main

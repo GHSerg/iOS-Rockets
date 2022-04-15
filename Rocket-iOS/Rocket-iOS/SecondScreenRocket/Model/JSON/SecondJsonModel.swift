@@ -1,8 +1,9 @@
-//
-//  JsonModel.swift
-//  Rocket-iOS
-//
-//  Created by Sergey Bodnar on 14.04.2022.
-//
-
 import Foundation
+
+    struct rocketData: Decodable {
+        var name: String?
+        var date_utc: String?
+        var rocket: String?
+        var success: Bool?
+    }
+
