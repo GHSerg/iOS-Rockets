@@ -41,7 +41,11 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func launchesRocketButton(_ sender: Any) {
-        guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
+        let controller = LaunchesBuilder.createLaunchesViewController()
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .flipHorizontal
+        self.present(controller, animated: true, completion: nil)
+       // guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
         //controller.modalPresentationStyle = .fullScreen
         //controller.modalTransitionStyle = .flipHorizontal
         //  controller.idRocket = rockets?[rocket].id

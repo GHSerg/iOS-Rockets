@@ -1,10 +1,10 @@
 import UIKit
 
-protocol Builder {
+protocol SettingsBuilderProtocol {
     static func createSettingsViewController() -> UIViewController
 }
 
-class SettingsBuilder: Builder {
+class SettingsBuilder: SettingsBuilderProtocol {
     static func createSettingsViewController() -> UIViewController {
         let model = SettingsDataModel(model: ["heightRocket": "ft",
                                               "diameterRocket": "ft",

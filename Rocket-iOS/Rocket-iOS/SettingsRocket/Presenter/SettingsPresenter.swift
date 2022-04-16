@@ -14,23 +14,21 @@ protocol SettingsPresenterProtocol: AnyObject{
 
 class SettingsPresenter: SettingsPresenterProtocol {
 
-    let view: SettingsViewControllerProtocol
+    weak var view: SettingsViewControllerProtocol?
     var settings: SettingsDataModel
-    
     
     required init(view: SettingsViewControllerProtocol, settings: SettingsDataModel) {
         self.view = view
         self.settings = settings
     }
  
-    
     func saveSettings() {
         UserDefaults.standard.set(settings.model, forKey: "settings")
     }
     
     func loadSettings() {
         settings.model = UserDefaults.standard.value(forKey: "settings") as? [String: String] ?? settings.model
-        view.setSegmentedControll(settings: settings)
+        view?.setSegmentedControll(settings: settings)
     }
     
     func setSettingsInfoRocket(name: String, segmentIndex: Int) {
