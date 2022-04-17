@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Main Rocket View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainRocketViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="412" height="1168"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
                                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="settingsActionRocketButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TTC-Qd-RsD"/>
+                                                            <action selector="settingsRocketButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCx-8U-NMR"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -94,7 +94,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InfoRocketCollectionViewCell" id="Iap-t8-owf" userLabel="InfoCollectionViewCell" customClass="InfoRocketCollectionViewCell" customModule="Rocket_iOS" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCollectionViewCell" id="Iap-t8-owf" userLabel="InfoCollectionViewCell" customClass="MainCollectionViewCell" customModule="Rocket_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -254,16 +254,13 @@
                                                                         <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkR-eF-KCd" userLabel="SpacerLabel">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKq-SZ-dso" userLabel="SpacerView">
                                                                         <rect key="frame" x="312" y="0.0" width="36" height="24"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="36" id="MVy-gb-akO"/>
-                                                                            <constraint firstAttribute="height" constant="24" id="kK5-Vu-lOt"/>
+                                                                            <constraint firstAttribute="height" constant="24" id="Uua-1K-KHQ"/>
+                                                                            <constraint firstAttribute="width" constant="36" id="e4c-jL-3AD"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                    </view>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NAh-N0-Edk" userLabel="FirstFuelStackViewH">
@@ -367,16 +364,13 @@
                                                                         <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="je2-5N-im8" userLabel="SpacerLabel">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qej-b3-3sO" userLabel="SpacerView">
                                                                         <rect key="frame" x="312" y="0.0" width="36" height="24"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="24" id="79L-OZ-OxC"/>
-                                                                            <constraint firstAttribute="width" constant="36" id="c2P-Kx-Hnt"/>
+                                                                            <constraint firstAttribute="height" constant="24" id="g7U-SF-swD"/>
+                                                                            <constraint firstAttribute="width" constant="36" id="vxk-eF-Ebd"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                    </view>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MTh-K1-WaM" userLabel="SecondFuelStackViewH">
@@ -519,22 +513,21 @@
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWn-tW-r84" userLabel="BottomSliderView">
-                                <rect key="frame" x="0.0" y="744" width="412" height="72"/>
+                                <rect key="frame" x="0.0" y="1097" width="412" height="72"/>
                                 <subviews>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nXp-lS-7ej">
-                                        <rect key="frame" x="148.33333333333334" y="23" width="115.33333333333334" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115.5" id="Gdd-Cw-uwF"/>
-                                            <constraint firstAttribute="width" constant="115.5" id="KT3-aS-6Ql"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="MLH-ho-RWV"/>
-                                            <constraint firstAttribute="height" constant="26" id="csx-jm-M7d"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="412" height="72"/>
+                                        <connections>
+                                            <action selector="chooseRocketPageControlView:" destination="BYZ-38-t0r" eventType="valueChanged" id="Tao-zY-mTd"/>
+                                        </connections>
                                     </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="nXp-lS-7ej" firstAttribute="centerY" secondItem="IWn-tW-r84" secondAttribute="centerY" id="bcu-Vb-IDn"/>
-                                    <constraint firstItem="nXp-lS-7ej" firstAttribute="centerX" secondItem="IWn-tW-r84" secondAttribute="centerX" id="icA-LH-n7N"/>
+                                    <constraint firstItem="nXp-lS-7ej" firstAttribute="top" secondItem="IWn-tW-r84" secondAttribute="top" id="0ry-0p-5sd"/>
+                                    <constraint firstAttribute="trailing" secondItem="nXp-lS-7ej" secondAttribute="trailing" id="1Xd-O9-Kc1"/>
+                                    <constraint firstItem="nXp-lS-7ej" firstAttribute="leading" secondItem="IWn-tW-r84" secondAttribute="leading" id="AIt-MU-B20"/>
+                                    <constraint firstAttribute="bottom" secondItem="nXp-lS-7ej" secondAttribute="bottom" id="QJv-Sh-9Mm"/>
                                     <constraint firstAttribute="height" constant="72" id="uxy-bS-0iT"/>
                                 </constraints>
                             </view>
@@ -549,10 +542,11 @@
                             <constraint firstItem="SjG-3Q-Smq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OII-y4-QcZ"/>
                             <constraint firstItem="SjG-3Q-Smq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TLQ-bo-VXQ"/>
                             <constraint firstItem="IWn-tW-r84" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UIo-zP-EJC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IWn-tW-r84" secondAttribute="bottom" constant="-35" id="YYQ-11-hTh"/>
                             <constraint firstItem="IWn-tW-r84" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bTh-Ug-HDf"/>
-                            <constraint firstItem="IWn-tW-r84" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="700" id="jaf-Iu-dOZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cXB-Cx-66c"/>
                     <size key="freeformSize" width="412" height="1168"/>
                     <connections>
                         <outlet property="burnSecFirstStageLabel" destination="5xP-2X-9l0" id="p78-3F-RRC"/>
@@ -564,12 +558,12 @@
                         <outlet property="firstFlightLabel" destination="jWO-Lg-q3i" id="7Ii-c4-fyJ"/>
                         <outlet property="fuelFirstStageLabel" destination="B19-7P-oMZ" id="JVj-SS-KdB"/>
                         <outlet property="fuelSecondStageLabel" destination="VRC-7k-YDF" id="r5N-aH-ztC"/>
-                        <outlet property="infoCollectionView" destination="qpK-FU-BHt" id="SmV-iB-Q4J"/>
                         <outlet property="infoRocketView" destination="RQm-Bz-eLf" id="iT0-tx-cxB"/>
                         <outlet property="launchesRocketButtonOutlet" destination="ai8-ra-zFP" id="A5A-EN-oqn"/>
                         <outlet property="nameRocketLabel" destination="N6V-3z-qyp" id="02s-gR-IpV"/>
                         <outlet property="nameSettingsRocketView" destination="ieV-0g-PoU" id="Bwf-u2-6lK"/>
                         <outlet property="pageControlView" destination="nXp-lS-7ej" id="BgY-uK-9sV"/>
+                        <outlet property="paramertsRocketCollectionView" destination="qpK-FU-BHt" id="a1M-Zf-vw2"/>
                         <outlet property="rocketImageView" destination="6ms-Fd-E9S" id="3zg-P4-QjV"/>
                     </connections>
                 </viewController>
@@ -577,10 +571,10 @@
             </objects>
             <point key="canvasLocation" x="-114.49275362318842" y="35.491071428571423"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Launches View Controller-->
         <scene sceneID="nkn-Il-syQ">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="JP0-Jz-USq" customClass="SecondViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchesViewController" id="JP0-Jz-USq" customClass="LaunchesViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R0q-QK-4OQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -637,17 +631,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cB-93-Xjr">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jJd-GY-ct6">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jJd-GY-ct6" userLabel="LaunchesTableView">
                                         <rect key="frame" x="32" y="40" width="311" height="684"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondScreenTableViewCell" id="zbw-iu-1Fm" customClass="SecondScreenTableViewCell" customModule="Rocket_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.666666030883789" width="311" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zbw-iu-1Fm" id="Qka-A2-dDf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="311" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MainCollectionViewCell" rowHeight="116" id="gyp-Vb-z98">
+                                                <rect key="frame" x="0.0" y="44.666666030883789" width="311" height="116"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gyp-Vb-z98" id="agE-ML-Rtm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="311" height="116"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -666,7 +662,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FIA-AR-EmS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tkF-YK-0LA" firstAttribute="leading" secondItem="FIA-AR-EmS" secondAttribute="leading" id="54y-C1-WHR"/>
                             <constraint firstItem="6cB-93-Xjr" firstAttribute="top" secondItem="tkF-YK-0LA" secondAttribute="bottom" id="59f-tK-vDp"/>
@@ -686,10 +682,10 @@
             </objects>
             <point key="canvasLocation" x="796" y="-95.320197044334975"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="uCF-Us-LLU">
             <objects>
-                <viewController storyboardIdentifier="ThirdViewController" id="ECv-sd-cVQ" customClass="ThirdViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" id="ECv-sd-cVQ" customClass="SettingsViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VTH-7e-rZI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -747,23 +743,20 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="lQ4-nO-EmW">
                                                 <rect key="frame" x="0.0" y="0.0" width="316" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Высота" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIZ-r4-9ym">
-                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Высота" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIZ-r4-9ym" userLabel="Height">
+                                                        <rect key="frame" x="0.0" y="0.0" width="221" height="40"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                         <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="hTY-ZO-grY">
-                                                        <rect key="frame" x="201" y="0.0" width="115" height="41"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="115" id="boY-JF-Te7"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="249" y="0.0" width="67" height="41"/>
                                                         <segments>
-                                                            <segment title=""/>
-                                                            <segment title=""/>
+                                                            <segment title="m"/>
+                                                            <segment title="ft"/>
                                                         </segments>
                                                         <connections>
-                                                            <action selector="heightChoice:" destination="ECv-sd-cVQ" eventType="valueChanged" id="lT3-b7-Wxe"/>
+                                                            <action selector="heightRocketChoice:" destination="ECv-sd-cVQ" eventType="valueChanged" id="k8w-Zw-7tA"/>
                                                         </connections>
                                                     </segmentedControl>
                                                 </subviews>
@@ -774,54 +767,63 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="3vo-Ak-wV2">
                                                 <rect key="frame" x="0.0" y="64" width="316" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Диаметр" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeF-yL-1il">
-                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Диаметр" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeF-yL-1il" userLabel="Diameter">
+                                                        <rect key="frame" x="0.0" y="0.0" width="221" height="40"/>
                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                         <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="bmK-Vv-Oon">
-                                                        <rect key="frame" x="201" y="0.0" width="115" height="41"/>
+                                                    <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="bmK-Vv-Oon">
+                                                        <rect key="frame" x="249" y="0.0" width="67" height="41"/>
                                                         <segments>
-                                                            <segment title=""/>
-                                                            <segment title=""/>
+                                                            <segment title="m"/>
+                                                            <segment title="ft"/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="diameterRocketChoice:" destination="ECv-sd-cVQ" eventType="valueChanged" id="0o1-at-O5e"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="wHd-jP-45o">
                                                 <rect key="frame" x="0.0" y="128" width="316" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Масса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88N-oV-MCu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Масса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88N-oV-MCu" userLabel="Mass">
+                                                        <rect key="frame" x="0.0" y="0.0" width="221" height="40"/>
                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                         <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="5LE-qJ-qZW">
-                                                        <rect key="frame" x="201" y="0.0" width="115" height="41"/>
+                                                    <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="5LE-qJ-qZW">
+                                                        <rect key="frame" x="249" y="0.0" width="67" height="41"/>
                                                         <segments>
-                                                            <segment title=""/>
-                                                            <segment title=""/>
+                                                            <segment title="kg"/>
+                                                            <segment title="lb"/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="massRocketChoice:" destination="ECv-sd-cVQ" eventType="valueChanged" id="aTp-aK-7Y7"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="nFi-oA-rCB">
                                                 <rect key="frame" x="0.0" y="192" width="316" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Полезная нагрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-qi-Tcc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Полезная нагрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-qi-Tcc" userLabel="Payload">
+                                                        <rect key="frame" x="0.0" y="0.0" width="221" height="40"/>
                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                         <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="1bb-Xi-FOv">
-                                                        <rect key="frame" x="201" y="0.0" width="115" height="41"/>
+                                                    <segmentedControl opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="1bb-Xi-FOv">
+                                                        <rect key="frame" x="249" y="0.0" width="67" height="41"/>
                                                         <segments>
-                                                            <segment title=""/>
-                                                            <segment title=""/>
+                                                            <segment title="kg"/>
+                                                            <segment title="lb"/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="payloadRocketChoice:" destination="ECv-sd-cVQ" eventType="valueChanged" id="JZ3-8e-dz5"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>
@@ -866,7 +868,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="heightInfoRocket" destination="hTY-ZO-grY" id="6jN-k5-8Ss"/>
+                        <outlet property="diameterRocketChoice" destination="bmK-Vv-Oon" id="obq-bC-giP"/>
+                        <outlet property="heightRocketChoice" destination="hTY-ZO-grY" id="bAN-i1-9nM"/>
+                        <outlet property="massRocketChoice" destination="5LE-qJ-qZW" id="ec7-UJ-VoD"/>
+                        <outlet property="payloadRocketChoice" destination="1bb-Xi-FOv" id="bqh-Gi-yK2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ang-mm-Xc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
