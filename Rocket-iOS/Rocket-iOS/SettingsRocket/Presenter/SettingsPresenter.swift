@@ -1,5 +1,9 @@
 import Foundation
 
+protocol SettingsPresenterDelegate: AnyObject {
+    func setParametrsRocket()
+}
+
 protocol SettingsViewControllerProtocol: AnyObject {
     func setSegmentedControll (settings: SettingsDataModel)
 }
@@ -13,13 +17,18 @@ protocol SettingsPresenterProtocol: AnyObject{
 
 
 class SettingsPresenter: SettingsPresenterProtocol {
-
+ 
     weak var view: SettingsViewControllerProtocol?
+    weak var delegate: SettingsPresenterDelegate?
+    
     var settings: SettingsDataModel
+    
+   
     
     required init(view: SettingsViewControllerProtocol, settings: SettingsDataModel) {
         self.view = view
         self.settings = settings
+        
     }
  
     func saveSettings() {
@@ -48,7 +57,8 @@ class SettingsPresenter: SettingsPresenterProtocol {
         default:
             return
         }
-        print(settings)
+        saveSettings()
+        delegate?.setParametrsRocket()
     }
     
 }

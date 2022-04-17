@@ -1,12 +1,12 @@
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, SettingsPresenterDelegate  {
     
     var mainPresenter: MainPresenterProtocol?
     var indexRocket = 0
     
     @IBOutlet weak var infoRocketView: UIView!
-    @IBOutlet weak var infoCollectionView: UICollectionView!
+    @IBOutlet weak var paramertsRocketCollectionView: UICollectionView!
     @IBOutlet weak var nameSettingsRocketView: UIView!
     @IBOutlet weak var pageControlView: UIPageControl!
     @IBOutlet weak var launchesRocketButtonOutlet: UIButton!
@@ -35,21 +35,25 @@ class MainViewController: UIViewController {
         setupLayout()
         MainBuilder.buildMainViewController(view: self)
     }
-    
+
     @IBAction func chooseRocketPageControlView(_ sender: Any) {
         indexRocket = pageControlView.currentPage
-        succes()
+        setDescriptionRocket()
+        setParametrsRocket()
     }
     
     @IBAction func launchesRocketButton(_ sender: Any) {
-        let controller = LaunchesBuilder.createLaunchesViewController()
+        let controller = LaunchesBuilder.createLaunchesViewController(
+            rocketName: mainPresenter?.mainRockets?[indexRocket].name ?? "none",
+            idRocket: mainPresenter?.mainRockets?[indexRocket].id ?? "none")
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .flipHorizontal
+        
         self.present(controller, animated: true, completion: nil)
     }
     
-    @IBAction func settingsActionRocketButton(_ sender: Any) {
-        let controller = SettingsBuilder.createSettingsViewController()
+    @IBAction func settingsRocketButton(_ sender: Any) {
+        let controller = SettingsBuilder.createSettingsViewController(self: self)
         self.present(controller, animated: true, completion: nil)
     }
     
@@ -118,15 +122,21 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
 // MARK: - Constants
 
 extension MainViewController: MainViewControllerProtocol {
+    
     func succes() {
         setDescriptionRocket()
-        mainPresenter?.setParametrsRocket(indexRocket: indexRocket)
-        infoCollectionView.reloadData()
+        setParametrsRocket()
         setNumberOfPagePageControl()
     }
     
-    func failure(error: Error) {
+    func setParametrsRocket() {
+        mainPresenter?.setParametrsRocket(indexRocket: indexRocket)
+        paramertsRocketCollectionView.reloadData()
+    }
 
+    
+    func failure(error: Error) {
+        
     }
     
 }

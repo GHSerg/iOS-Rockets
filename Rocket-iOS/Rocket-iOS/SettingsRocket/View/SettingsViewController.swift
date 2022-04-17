@@ -1,8 +1,7 @@
 import UIKit
 
-
 class SettingsViewController: UIViewController {
-    
+
 var settingsPresenter: SettingsPresenterProtocol?
     
     @IBOutlet weak var heightRocketChoice: UISegmentedControl!

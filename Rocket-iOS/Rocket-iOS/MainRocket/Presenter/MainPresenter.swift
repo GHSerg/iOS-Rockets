@@ -1,14 +1,15 @@
 import Foundation
 
 protocol MainViewControllerProtocol: AnyObject {
+   // var indexRocket: Int { get }
     func succes()
     func failure(error: Error)
-    
 }
 
 protocol MainPresenterProtocol: AnyObject{
     init (view: MainViewControllerProtocol, mainNetworkService: MainNetworkServiceProtocol)
     
+   // var indexRocket: Int {get set}
     var mainRockets: [MainJsonModel]? { get set }
     var parametrsRocket: [[String: String]] { get }
     func getMainRockets()
@@ -17,6 +18,7 @@ protocol MainPresenterProtocol: AnyObject{
 }
 
 class MainPresenter: MainPresenterProtocol {
+
     weak var view: MainViewControllerProtocol?
     let mainNetworkService: MainNetworkServiceProtocol?
     var mainRockets: [MainJsonModel]?
@@ -76,6 +78,7 @@ class MainPresenter: MainPresenterProtocol {
         
         loadSettings()
         
+        print (settings)
         settings.enumerated().forEach { index, setting in
             
             switch index {

@@ -3,6 +3,8 @@ import UIKit
 class LaunchesViewController: UIViewController {
     
     var launchesPresenter: LaunchesPresenterProtocol?
+    var rocketName: String?
+    var idRocket: String?
     
     @IBOutlet weak var rocketNameTitleLabel: UILabel!
     @IBOutlet weak var rocketTableView: UITableView!
@@ -10,14 +12,22 @@ class LaunchesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        rocketTableView.register(UINib(nibName: "LaunchesTableViewCell", bundle: nil),
-                                 forCellReuseIdentifier: "LaunchesTableViewCell")
+
+
+        setupView() // настройки для view
+        
     }
     
     @IBAction func backButtonAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
+
+    func setupView() {
+        rocketTableView.register(UINib(nibName: "LaunchesTableViewCell", bundle: nil),
+                                 forCellReuseIdentifier: "LaunchesTableViewCell")
+        rocketNameTitleLabel.text = rocketName
+        
+    }
 }
 
 extension LaunchesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -39,6 +49,8 @@ extension LaunchesViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension LaunchesViewController: LaunchesViewControllerProtocol {
     func succes() {
+        guard let idRocket = idRocket else { return }
+        launchesPresenter?.filterlaunchesRocket(idRocket: idRocket)
         rocketTableView.reloadData()
     }
     

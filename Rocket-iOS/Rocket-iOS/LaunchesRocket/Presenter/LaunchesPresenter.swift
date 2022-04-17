@@ -9,8 +9,10 @@ protocol LaunchesPresenterProtocol: AnyObject{
     init (view: LaunchesViewControllerProtocol, launchesNetworkService: LaunchesNetworkServiceProtocol)
     
     var launchesRocket: [LaunchesJsonModel]? { get set }
+    
     func getLaunchesRocket()
     func convertDate(dateLaunch: String) -> String
+    func filterlaunchesRocket (idRocket: String)
 }
 
 class LaunchesPresenter: LaunchesPresenterProtocol {
@@ -18,7 +20,7 @@ class LaunchesPresenter: LaunchesPresenterProtocol {
     weak var view: LaunchesViewControllerProtocol?
     let launchesNetworkService: LaunchesNetworkServiceProtocol?
     var launchesRocket: [LaunchesJsonModel]?
-    var idRocket = "5e9d0d95eda69955f709d1eb"
+
     
     required init(view: LaunchesViewControllerProtocol, launchesNetworkService: LaunchesNetworkServiceProtocol) {
         self.view = view
@@ -34,7 +36,8 @@ class LaunchesPresenter: LaunchesPresenterProtocol {
                 switch result {
                 case .success(let launchesRocket):
                     self.launchesRocket = launchesRocket
-                    self.filterlaunchesRocket ()
+                    self.view?.succes()
+                   // self.filterlaunchesRocket ()
                 case .failure(let error):
                     self.view?.failure(error: error)
                 }
@@ -54,12 +57,10 @@ class LaunchesPresenter: LaunchesPresenterProtocol {
         return (formatterDate.string(from: date))
     }
     
-    
-    func filterlaunchesRocket () {
+    func filterlaunchesRocket (idRocket: String) {
         launchesRocket = launchesRocket?
             .filter{ $0.rocket == idRocket }
             .reversed()
-        self.view?.succes()
     }
     
 }

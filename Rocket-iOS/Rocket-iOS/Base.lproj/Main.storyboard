@@ -67,7 +67,7 @@
                                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="settingsActionRocketButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TTC-Qd-RsD"/>
+                                                            <action selector="settingsRocketButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCx-8U-NMR"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -564,12 +564,12 @@
                         <outlet property="firstFlightLabel" destination="jWO-Lg-q3i" id="7Ii-c4-fyJ"/>
                         <outlet property="fuelFirstStageLabel" destination="B19-7P-oMZ" id="JVj-SS-KdB"/>
                         <outlet property="fuelSecondStageLabel" destination="VRC-7k-YDF" id="r5N-aH-ztC"/>
-                        <outlet property="infoCollectionView" destination="qpK-FU-BHt" id="SmV-iB-Q4J"/>
                         <outlet property="infoRocketView" destination="RQm-Bz-eLf" id="iT0-tx-cxB"/>
                         <outlet property="launchesRocketButtonOutlet" destination="ai8-ra-zFP" id="A5A-EN-oqn"/>
                         <outlet property="nameRocketLabel" destination="N6V-3z-qyp" id="02s-gR-IpV"/>
                         <outlet property="nameSettingsRocketView" destination="ieV-0g-PoU" id="Bwf-u2-6lK"/>
                         <outlet property="pageControlView" destination="nXp-lS-7ej" id="BgY-uK-9sV"/>
+                        <outlet property="paramertsRocketCollectionView" destination="qpK-FU-BHt" id="a1M-Zf-vw2"/>
                         <outlet property="rocketImageView" destination="6ms-Fd-E9S" id="3zg-P4-QjV"/>
                     </connections>
                 </viewController>
