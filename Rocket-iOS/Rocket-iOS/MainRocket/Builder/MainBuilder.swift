@@ -6,15 +6,10 @@ protocol MainBuilderProtocol {
 
 class MainBuilder: MainBuilderProtocol {
 
-
-
     static func buildMainViewController(view: MainViewController) {
 
         let networkService = MainNetworkService()
-        let presenter = MainPresenter (view: view, mainNetworkService: networkService)
+        let presenter = MainPresenter(view: view, mainNetworkService: networkService)
         view.mainPresenter = presenter
-
     }
 }
-
-

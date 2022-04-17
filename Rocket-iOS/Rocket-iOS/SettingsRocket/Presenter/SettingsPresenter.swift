@@ -8,38 +8,34 @@ protocol SettingsViewControllerProtocol: AnyObject {
     func setSegmentedControll (settings: SettingsDataModel)
 }
 
-protocol SettingsPresenterProtocol: AnyObject{
+protocol SettingsPresenterProtocol: AnyObject {
     init (view: SettingsViewControllerProtocol, settings: SettingsDataModel)
     func saveSettings()
     func loadSettings()
     func setSettingsInfoRocket(name: String, segmentIndex: Int)
 }
 
-
 class SettingsPresenter: SettingsPresenterProtocol {
- 
+
     weak var view: SettingsViewControllerProtocol?
     weak var delegate: SettingsPresenterDelegate?
-    
+
     var settings: SettingsDataModel
-    
-   
-    
+
     required init(view: SettingsViewControllerProtocol, settings: SettingsDataModel) {
         self.view = view
         self.settings = settings
-        
     }
- 
+
     func saveSettings() {
         UserDefaults.standard.set(settings.model, forKey: "settings")
     }
-    
+
     func loadSettings() {
         settings.model = UserDefaults.standard.value(forKey: "settings") as? [String: String] ?? settings.model
         view?.setSegmentedControll(settings: settings)
     }
-    
+
     func setSettingsInfoRocket(name: String, segmentIndex: Int) {
         switch name {
         case "heightRocket": segmentIndex == 1
@@ -60,5 +56,4 @@ class SettingsPresenter: SettingsPresenterProtocol {
         saveSettings()
         delegate?.setParametrsRocket()
     }
-    
 }

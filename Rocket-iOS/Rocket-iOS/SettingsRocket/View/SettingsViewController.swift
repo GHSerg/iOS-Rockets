@@ -1,8 +1,8 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
-var settingsPresenter: SettingsPresenterProtocol?
+    
+    var settingsPresenter: SettingsPresenterProtocol?
     
     @IBOutlet weak var heightRocketChoice: UISegmentedControl!
     @IBOutlet weak var diameterRocketChoice: UISegmentedControl!
@@ -13,7 +13,6 @@ var settingsPresenter: SettingsPresenterProtocol?
         super.viewDidLoad()
         
         settingsPresenter?.loadSettings()
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -22,30 +21,30 @@ var settingsPresenter: SettingsPresenterProtocol?
     
     @IBAction func heightRocketChoice(_ sender: Any) {
         settingsPresenter?.setSettingsInfoRocket(name: "heightRocket",
-                                             segmentIndex: heightRocketChoice.selectedSegmentIndex)
+                                                 segmentIndex: heightRocketChoice.selectedSegmentIndex)
     }
-    
     
     @IBAction func diameterRocketChoice(_ sender: Any) {
         settingsPresenter?.setSettingsInfoRocket(name: "diameterRocket",
-                                             segmentIndex: diameterRocketChoice.selectedSegmentIndex)
+                                                 segmentIndex: diameterRocketChoice.selectedSegmentIndex)
     }
     
     @IBAction func massRocketChoice(_ sender: Any) {
         settingsPresenter?.setSettingsInfoRocket(name: "massRocket",
-                                             segmentIndex: massRocketChoice.selectedSegmentIndex)
+                                                 segmentIndex: massRocketChoice.selectedSegmentIndex)
     }
     
     @IBAction func payloadRocketChoice(_ sender: Any) {
         settingsPresenter?.setSettingsInfoRocket(name: "payloadRocket",
-                                             segmentIndex: payloadRocketChoice.selectedSegmentIndex)
+                                                 segmentIndex: payloadRocketChoice.selectedSegmentIndex)
     }
     
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
+
+// MARK: - Extension
 
 extension SettingsViewController: SettingsViewControllerProtocol {
     
@@ -66,6 +65,5 @@ extension SettingsViewController: SettingsViewControllerProtocol {
         settings.model["payloadRocket"] == "lb"
         ? (payloadRocketChoice.selectedSegmentIndex = 1)
         : (payloadRocketChoice.selectedSegmentIndex = 0)
-        
     }
 }

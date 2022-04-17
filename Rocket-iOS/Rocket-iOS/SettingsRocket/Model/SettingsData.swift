@@ -1,4 +1,3 @@
 import Foundation
 
-var settingsModel = [String :String]()
-
+var settingsModel = [String: String]()

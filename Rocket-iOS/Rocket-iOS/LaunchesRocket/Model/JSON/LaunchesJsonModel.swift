@@ -6,4 +6,3 @@ struct LaunchesJsonModel: Decodable {
     var rocket: String?
     var success: Bool?
 }
-

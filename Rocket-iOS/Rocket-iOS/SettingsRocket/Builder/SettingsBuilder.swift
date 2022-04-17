@@ -10,16 +10,14 @@ class SettingsBuilder: SettingsBuilderProtocol {
                                               "diameterRocket": "ft",
                                               "massRocket": "lb",
                                               "payloadRocket": "lb"])
-        guard let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController else { return UIViewController() }
-       
-        let presenter = SettingsPresenter (view: view, settings: model)
-        presenter.delegate = self as? SettingsPresenterDelegate
-        
+        guard let view = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: "SettingsViewController") as?
+                SettingsViewController else { return UIViewController() }
+
+        let presenter = SettingsPresenter(view: view, settings: model)
+        presenter.delegate = self
+
         view.settingsPresenter = presenter
         return view
     }
-    
-    
 }
-
-

@@ -254,16 +254,13 @@
                                                                         <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkR-eF-KCd" userLabel="SpacerLabel">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKq-SZ-dso" userLabel="SpacerView">
                                                                         <rect key="frame" x="312" y="0.0" width="36" height="24"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="36" id="MVy-gb-akO"/>
-                                                                            <constraint firstAttribute="height" constant="24" id="kK5-Vu-lOt"/>
+                                                                            <constraint firstAttribute="height" constant="24" id="Uua-1K-KHQ"/>
+                                                                            <constraint firstAttribute="width" constant="36" id="e4c-jL-3AD"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                    </view>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NAh-N0-Edk" userLabel="FirstFuelStackViewH">
@@ -367,16 +364,13 @@
                                                                         <color key="textColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="je2-5N-im8" userLabel="SpacerLabel">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qej-b3-3sO" userLabel="SpacerView">
                                                                         <rect key="frame" x="312" y="0.0" width="36" height="24"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="24" id="79L-OZ-OxC"/>
-                                                                            <constraint firstAttribute="width" constant="36" id="c2P-Kx-Hnt"/>
+                                                                            <constraint firstAttribute="height" constant="24" id="g7U-SF-swD"/>
+                                                                            <constraint firstAttribute="width" constant="36" id="vxk-eF-Ebd"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                    </view>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MTh-K1-WaM" userLabel="SecondFuelStackViewH">
@@ -641,7 +635,7 @@
                                         <rect key="frame" x="32" y="40" width="311" height="684"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="116" id="gyp-Vb-z98">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MainCollectionViewCell" rowHeight="116" id="gyp-Vb-z98">
                                                 <rect key="frame" x="0.0" y="44.666666030883789" width="311" height="116"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gyp-Vb-z98" id="agE-ML-Rtm">
@@ -750,16 +744,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="316" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Высота" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIZ-r4-9ym" userLabel="Height">
-                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="221" height="40"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                         <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="hTY-ZO-grY">
-                                                        <rect key="frame" x="201" y="0.0" width="115" height="41"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="115" id="boY-JF-Te7"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="249" y="0.0" width="67" height="41"/>
                                                         <segments>
                                                             <segment title="m"/>
                                                             <segment title="ft"/>
@@ -777,13 +768,13 @@
                                                 <rect key="frame" x="0.0" y="64" width="316" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Диаметр" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeF-yL-1il" userLabel="Diameter">
-                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="221" height="40"/>
                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                         <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="bmK-Vv-Oon">
-                                                        <rect key="frame" x="201" y="0.0" width="115" height="41"/>
+                                                        <rect key="frame" x="249" y="0.0" width="67" height="41"/>
                                                         <segments>
                                                             <segment title="m"/>
                                                             <segment title="ft"/>
@@ -798,13 +789,13 @@
                                                 <rect key="frame" x="0.0" y="128" width="316" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Масса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88N-oV-MCu" userLabel="Mass">
-                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="221" height="40"/>
                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                         <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="5LE-qJ-qZW">
-                                                        <rect key="frame" x="201" y="0.0" width="115" height="41"/>
+                                                        <rect key="frame" x="249" y="0.0" width="67" height="41"/>
                                                         <segments>
                                                             <segment title="kg"/>
                                                             <segment title="lb"/>
@@ -819,13 +810,13 @@
                                                 <rect key="frame" x="0.0" y="192" width="316" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Полезная нагрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-qi-Tcc" userLabel="Payload">
-                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="221" height="40"/>
                                                         <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="16"/>
                                                         <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <segmentedControl opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="1bb-Xi-FOv">
-                                                        <rect key="frame" x="201" y="0.0" width="115" height="41"/>
+                                                        <rect key="frame" x="249" y="0.0" width="67" height="41"/>
                                                         <segments>
                                                             <segment title="kg"/>
                                                             <segment title="lb"/>

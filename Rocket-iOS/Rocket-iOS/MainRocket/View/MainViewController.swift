@@ -1,6 +1,6 @@
 import UIKit
 
-class MainViewController: UIViewController, SettingsPresenterDelegate  {
+class MainViewController: UIViewController, SettingsPresenterDelegate {
     
     var mainPresenter: MainPresenterProtocol?
     var indexRocket = 0
@@ -22,7 +22,6 @@ class MainViewController: UIViewController, SettingsPresenterDelegate  {
     @IBOutlet weak var fuelFirstStageLabel: UILabel!
     @IBOutlet weak var burnSecFirstStageLabel: UILabel!
     
-    
     @IBOutlet weak var enginesSecondStageLabel: UILabel!
     @IBOutlet weak var fuelSecondStageLabel: UILabel!
     @IBOutlet weak var burnSecSecondStageLabel: UILabel!
@@ -35,7 +34,7 @@ class MainViewController: UIViewController, SettingsPresenterDelegate  {
         setupLayout()
         MainBuilder.buildMainViewController(view: self)
     }
-
+    
     @IBAction func chooseRocketPageControlView(_ sender: Any) {
         indexRocket = pageControlView.currentPage
         setDescriptionRocket()
@@ -67,7 +66,7 @@ class MainViewController: UIViewController, SettingsPresenterDelegate  {
     }
 }
 
-// MARK: - InfoRocketCollectionViewCell
+// MARK: - extension
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -75,7 +74,9 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as? MainCollectionViewCell else { return MainCollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell",
+                                                            for: indexPath) as? MainCollectionViewCell else
+        { return MainCollectionViewCell()}
         
         cell.configure(nameCell: mainPresenter?.parametrsRocket[indexPath.item]["name"] ?? "none",
                        unitCell: mainPresenter?.parametrsRocket[indexPath.item]["unit"] ?? "none",
@@ -84,8 +85,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
-    func setDescriptionRocket ()
-    {
+    func setDescriptionRocket () {
         let countryDictionary = [
             "none": "Отсутствует в словаре",
             "Republic of the Marshall Islands": "Маршалловы Острова",
@@ -95,8 +95,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         setImageRocket()
         
         nameRocketLabel.text = mainPresenter?.mainRockets?[indexRocket].name
-        firstFlightLabel.text = mainPresenter?.convertDate(firstFlight:
-                                                            mainPresenter?.mainRockets?[indexRocket].first_flight ?? "none")
+        firstFlightLabel.text = mainPresenter?.convertDate(firstFlight: mainPresenter?.mainRockets?[indexRocket]
+            .first_flight ?? "none")
         countryLabel.text = countryDictionary[mainPresenter?.mainRockets?[indexRocket].country ?? "none"]
         costLabel.text = ("$\((mainPresenter?.mainRockets?[indexRocket].cost_per_launch ?? 0)/1_000_000 ) млн")
         
@@ -110,7 +110,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func setImageRocket () {
-        guard let url = URL(string: (mainPresenter?.mainRockets?[indexRocket].flickr_images.randomElement() ?? "none") ?? "none")  else { return }
+        guard let url = URL(string: (mainPresenter?.mainRockets?[indexRocket]
+            .flickr_images.randomElement() ?? "none") ?? "none")  else { return }
         rocketImageView.load(url: url)
     }
     
@@ -118,8 +119,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         pageControlView.numberOfPages = mainPresenter?.parametrsRocket.count ?? 0
     }
 }
-
-// MARK: - Constants
 
 extension MainViewController: MainViewControllerProtocol {
     
@@ -133,18 +132,11 @@ extension MainViewController: MainViewControllerProtocol {
         mainPresenter?.setParametrsRocket(indexRocket: indexRocket)
         paramertsRocketCollectionView.reloadData()
     }
-
     
     func failure(error: Error) {
         
     }
     
-}
-
-extension MainViewController {
-    enum Metric {
-        static let viewRound: CGFloat = 32
-    }
 }
 
 extension UIImageView {
@@ -158,5 +150,12 @@ extension UIImageView {
                 }
             }
         }
+    }
+}
+
+// MARK: - Constants
+extension MainViewController {
+    enum Metric {
+        static let viewRound: CGFloat = 32
     }
 }

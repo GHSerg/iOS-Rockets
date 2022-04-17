@@ -1,27 +1,27 @@
 import Foundation
 
 protocol MainNetworkServiceProtocol {
-    func getMainRockets (completion: @escaping (Result<[MainJsonModel]?, Error>) -> ())
+    func getMainRockets (completion: @escaping (Result<[MainJsonModel]?, Error>) -> Void)
 }
 
 class MainNetworkService: MainNetworkServiceProtocol {
-    func getMainRockets(completion: @escaping (Result<[MainJsonModel]?, Error>) -> ()) {
+    func getMainRockets(completion: @escaping (Result<[MainJsonModel]?, Error>) -> Void) {
         let urlString = "https://api.spacexdata.com/v4/rockets"
-        
+
         guard let url = URL(string: urlString) else { return }
-        
+
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
+
+        URLSession.shared.dataTask(with: request) { data, _, error in
             DispatchQueue.main.async {
                 guard error == nil, let data = data else { return }
-                
+
                 do {
                     let mainRockets = try JSONDecoder().decode([MainJsonModel].self, from: data)
-                    completion (.success(mainRockets))
+                    completion(.success(mainRockets))
                 } catch {
-                    completion (.failure(error))
+                    completion(.failure(error))
                 }
             }
         }.resume()

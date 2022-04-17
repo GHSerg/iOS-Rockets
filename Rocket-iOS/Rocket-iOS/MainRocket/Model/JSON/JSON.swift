@@ -1,6 +1,6 @@
 import Foundation
 
-//struct JsonRocket: Decodable {
+// struct JsonRocket: Decodable {
 //    var flickr_images: [String?]
 //    
 //    var name: String?
@@ -17,36 +17,36 @@ import Foundation
 //    
 //    var first_stage: FirstStage?
 //    var second_stage: SecondStage?
-//}
+// }
 //
-//struct HeightRocket: Decodable {
+// struct HeightRocket: Decodable {
 //    var meters: Double?
 //    var feet: Double?
-//}
+// }
 //
-//struct DiameterRocket: Decodable {
+// struct DiameterRocket: Decodable {
 //    var meters: Double?
 //    var feet: Double?
-//}
+// }
 //
-//struct MassRocket: Decodable {
+// struct MassRocket: Decodable {
 //    var kg: Int?
 //    var lb: Int?
-//}
+// }
 //
-//struct PayloadWeights: Decodable {
+// struct PayloadWeights: Decodable {
 //    var kg: Int?
 //    var lb: Int?
-//}
+// }
 //
-//struct FirstStage: Decodable {
+// struct FirstStage: Decodable {
 //    var engines: Int?
 //    var fuel_amount_tons: Double?
 //    var burn_time_sec: Double?
-//}
+// }
 //
-//struct SecondStage: Decodable {
+// struct SecondStage: Decodable {
 //    var engines: Int?
 //    var fuel_amount_tons: Double?
 //    var burn_time_sec: Double?
-//}
+// }

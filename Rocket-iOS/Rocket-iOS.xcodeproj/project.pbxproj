@@ -158,7 +158,6 @@
 				9DE6EC95280000EC007C5AB2 /* LaunchesRocket */,
 				9DE6EC9628000144007C5AB2 /* SettingsRocket */,
 				9D2C39DF27FB2D8C00FCB361 /* Fonts */,
-				9DE6EC8B27FFF873007C5AB2 /* Resources */,
 				9D669F5827ED8AE100525E6F /* Main.storyboard */,
 				9D669F5B27ED8AE200525E6F /* Assets.xcassets */,
 				9D669F5D27ED8AE200525E6F /* LaunchScreen.storyboard */,
@@ -231,13 +230,6 @@
 				9D669F5627ED8AE100525E6F /* MainViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		9DE6EC8B27FFF873007C5AB2 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		9DE6EC9427FFFEC7007C5AB2 /* MainRocket */ = {

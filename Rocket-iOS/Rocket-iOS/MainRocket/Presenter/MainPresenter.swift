@@ -1,15 +1,13 @@
 import Foundation
 
 protocol MainViewControllerProtocol: AnyObject {
-   // var indexRocket: Int { get }
     func succes()
     func failure(error: Error)
 }
 
-protocol MainPresenterProtocol: AnyObject{
+protocol MainPresenterProtocol: AnyObject {
     init (view: MainViewControllerProtocol, mainNetworkService: MainNetworkServiceProtocol)
     
-   // var indexRocket: Int {get set}
     var mainRockets: [MainJsonModel]? { get set }
     var parametrsRocket: [[String: String]] { get }
     func getMainRockets()
@@ -18,7 +16,7 @@ protocol MainPresenterProtocol: AnyObject{
 }
 
 class MainPresenter: MainPresenterProtocol {
-
+    
     weak var view: MainViewControllerProtocol?
     let mainNetworkService: MainNetworkServiceProtocol?
     var mainRockets: [MainJsonModel]?
@@ -67,45 +65,50 @@ class MainPresenter: MainPresenterProtocol {
         return (formatterDate.string(from: date))
     }
     
-    func loadSettings() {
+    private func loadSettings() {
         settings = UserDefaults.standard.value(forKey: "settings") as? [String: String] ?? settings
     }
     
-    func setParametrsRocket (indexRocket: Int)
-    {
+    func setParametrsRocket (indexRocket: Int) {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         
         loadSettings()
         
-        print (settings)
-        settings.enumerated().forEach { index, setting in
+        settings.enumerated().forEach { index, _ in
             
             switch index {
-                
             case 0:
                 parametrsRocket[index]["unit"] = settings["heightRocket"]
                 settings["heightRocket"] == "ft"
-                ? parametrsRocket[index]["value"] = formatter.string(for: mainRockets?[indexRocket].height?.feet ?? 0)
-                : (parametrsRocket[index]["value"] = formatter.string(for: mainRockets?[indexRocket].height?.meters ?? 0))
+                ? parametrsRocket[index]["value"]
+                = formatter.string(for: mainRockets?[indexRocket].height?.feet ?? 0)
+                : (parametrsRocket[index]["value"]
+                   = formatter.string(for: mainRockets?[indexRocket].height?.meters ?? 0))
                 
             case 1:
                 parametrsRocket[index]["unit"] = settings["diameterRocket"]
                 settings["diameterRocket"] == "ft"
-                ? parametrsRocket[index]["value"] = formatter.string(for: mainRockets?[indexRocket].diameter?.feet ?? 0)
-                : (parametrsRocket[index]["value"] = formatter.string(for: mainRockets?[indexRocket].diameter?.meters ?? 0))
+                ? parametrsRocket[index]["value"]
+                = formatter.string(for: mainRockets?[indexRocket].diameter?.feet ?? 0)
+                : (parametrsRocket[index]["value"]
+                   = formatter.string(for: mainRockets?[indexRocket].diameter?.meters ?? 0))
                 
             case 2:
                 parametrsRocket[index]["unit"] = settings["massRocket"]
                 settings["massRocket"] == "lb"
-                ? parametrsRocket[index]["value"] = formatter.string(for: mainRockets?[indexRocket].mass?.lb ?? 0)
-                : (parametrsRocket[index]["value"] = formatter.string(for: mainRockets?[indexRocket].mass?.kg ?? 0))
+                ? parametrsRocket[index]["value"]
+                = formatter.string(for: mainRockets?[indexRocket].mass?.lb ?? 0)
+                : (parametrsRocket[index]["value"]
+                   = formatter.string(for: mainRockets?[indexRocket].mass?.kg ?? 0))
                 
             case 3:
                 parametrsRocket[index]["unit"] = settings["payloadRocket"]
                 settings["payloadRocket"] == "lb"
-                ? parametrsRocket[index]["value"] = formatter.string(for: mainRockets?[indexRocket].payload_weights.first??.lb ?? 0)
-                : (parametrsRocket[index]["value"] = formatter.string(for: mainRockets?[indexRocket].payload_weights.last??.kg ?? 0))
+                ? parametrsRocket[index]["value"]
+                = formatter.string(for: mainRockets?[indexRocket].payload_weights.first??.lb ?? 0)
+                : (parametrsRocket[index]["value"]
+                   = formatter.string(for: mainRockets?[indexRocket].payload_weights.last??.kg ?? 0))
                 
             default:
                 return
