@@ -6,28 +6,28 @@ protocol LaunchesViewControllerProtocol: AnyObject {
 }
 
 protocol LaunchesPresenterProtocol: AnyObject{
-    init (view: LaunchesViewControllerProtocol, networkService: NetworkServiceProtocol)
+    init (view: LaunchesViewControllerProtocol, launchesNetworkService: LaunchesNetworkServiceProtocol)
     
     var launchesRocket: [LaunchesJsonModel]? { get set }
     func getLaunchesRocket()
-    func convertDate(dateLaunch: String) -> String  
+    func convertDate(dateLaunch: String) -> String
 }
 
 class LaunchesPresenter: LaunchesPresenterProtocol {
     
     weak var view: LaunchesViewControllerProtocol?
-    let networkService: NetworkServiceProtocol?
+    let launchesNetworkService: LaunchesNetworkServiceProtocol?
     var launchesRocket: [LaunchesJsonModel]?
     var idRocket = "5e9d0d95eda69955f709d1eb"
     
-    required init(view: LaunchesViewControllerProtocol, networkService: NetworkServiceProtocol) {
+    required init(view: LaunchesViewControllerProtocol, launchesNetworkService: LaunchesNetworkServiceProtocol) {
         self.view = view
-        self.networkService = networkService
+        self.launchesNetworkService = launchesNetworkService
         getLaunchesRocket()
     }
     
     func getLaunchesRocket() {
-        networkService?.getLaunchesRocket { [weak self] result in
+        launchesNetworkService?.getLaunchesRocket { [weak self] result in
             guard let self = self else { return }
             
             DispatchQueue.main.async {

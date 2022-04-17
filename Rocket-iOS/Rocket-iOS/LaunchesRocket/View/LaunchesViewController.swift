@@ -45,8 +45,6 @@ extension LaunchesViewController: LaunchesViewControllerProtocol {
     func failure(error: Error) {
         print ("error")
     }
-    
-    
 }
 
 // MARK: - Set Data

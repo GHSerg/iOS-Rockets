@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--First View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="FirstViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Rocket_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="412" height="1168"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +94,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InfoRocketCollectionViewCell" id="Iap-t8-owf" userLabel="InfoCollectionViewCell" customClass="InfoRocketCollectionViewCell" customModule="Rocket_iOS" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCollectionViewCell" id="Iap-t8-owf" userLabel="InfoCollectionViewCell" customClass="MainCollectionViewCell" customModule="Rocket_iOS" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -519,22 +519,21 @@
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWn-tW-r84" userLabel="BottomSliderView">
-                                <rect key="frame" x="0.0" y="744" width="412" height="72"/>
+                                <rect key="frame" x="0.0" y="1097" width="412" height="72"/>
                                 <subviews>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="nXp-lS-7ej">
-                                        <rect key="frame" x="148.33333333333334" y="23" width="115.33333333333334" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="115.5" id="Gdd-Cw-uwF"/>
-                                            <constraint firstAttribute="width" constant="115.5" id="KT3-aS-6Ql"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="MLH-ho-RWV"/>
-                                            <constraint firstAttribute="height" constant="26" id="csx-jm-M7d"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="412" height="72"/>
+                                        <connections>
+                                            <action selector="chooseRocketPageControlView:" destination="BYZ-38-t0r" eventType="valueChanged" id="Tao-zY-mTd"/>
+                                        </connections>
                                     </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="nXp-lS-7ej" firstAttribute="centerY" secondItem="IWn-tW-r84" secondAttribute="centerY" id="bcu-Vb-IDn"/>
-                                    <constraint firstItem="nXp-lS-7ej" firstAttribute="centerX" secondItem="IWn-tW-r84" secondAttribute="centerX" id="icA-LH-n7N"/>
+                                    <constraint firstItem="nXp-lS-7ej" firstAttribute="top" secondItem="IWn-tW-r84" secondAttribute="top" id="0ry-0p-5sd"/>
+                                    <constraint firstAttribute="trailing" secondItem="nXp-lS-7ej" secondAttribute="trailing" id="1Xd-O9-Kc1"/>
+                                    <constraint firstItem="nXp-lS-7ej" firstAttribute="leading" secondItem="IWn-tW-r84" secondAttribute="leading" id="AIt-MU-B20"/>
+                                    <constraint firstAttribute="bottom" secondItem="nXp-lS-7ej" secondAttribute="bottom" id="QJv-Sh-9Mm"/>
                                     <constraint firstAttribute="height" constant="72" id="uxy-bS-0iT"/>
                                 </constraints>
                             </view>
@@ -549,8 +548,8 @@
                             <constraint firstItem="SjG-3Q-Smq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OII-y4-QcZ"/>
                             <constraint firstItem="SjG-3Q-Smq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TLQ-bo-VXQ"/>
                             <constraint firstItem="IWn-tW-r84" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UIo-zP-EJC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IWn-tW-r84" secondAttribute="bottom" constant="-35" id="YYQ-11-hTh"/>
                             <constraint firstItem="IWn-tW-r84" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bTh-Ug-HDf"/>
-                            <constraint firstItem="IWn-tW-r84" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="700" id="jaf-Iu-dOZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cXB-Cx-66c"/>

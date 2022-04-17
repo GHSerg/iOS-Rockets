@@ -1,12 +1,12 @@
 import Foundation
 
-protocol NetworkServiceProtocol {
-    func getLaunchesRocket (completion: @escaping (Result<[LaunchesJsonModel]?, Error>) -> ())
+protocol MainNetworkServiceProtocol {
+    func getMainRockets (completion: @escaping (Result<[MainJsonModel]?, Error>) -> ())
 }
 
-class NetworkService: NetworkServiceProtocol {
-    func getLaunchesRocket(completion: @escaping (Result<[LaunchesJsonModel]?, Error>) -> ()) {
-        let urlString = "https://api.spacexdata.com/v4/launches"
+class MainNetworkService: MainNetworkServiceProtocol {
+    func getMainRockets(completion: @escaping (Result<[MainJsonModel]?, Error>) -> ()) {
+        let urlString = "https://api.spacexdata.com/v4/rockets"
         
         guard let url = URL(string: urlString) else { return }
         
@@ -18,12 +18,12 @@ class NetworkService: NetworkServiceProtocol {
                 guard error == nil, let data = data else { return }
                 
                 do {
-                    let launchesRocket = try JSONDecoder().decode([LaunchesJsonModel].self, from: data)
-                    completion (.success(launchesRocket))
+                    let mainRockets = try JSONDecoder().decode([MainJsonModel].self, from: data)
+                    completion (.success(mainRockets))
                 } catch {
                     completion (.failure(error))
                 }
             }
         }.resume()
-    }  
+    }
 }

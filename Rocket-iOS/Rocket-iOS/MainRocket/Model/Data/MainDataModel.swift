@@ -1,69 +1,94 @@
 import Foundation
 
-final class DataRocketModel {
-    
-    var descriptionDataRocket = [DescriptionDataRocket]()
-    var infoDataRocket = [InfoDataRocket]()
-    
-    func setInfoData (rockets: [JsonRocket]?) -> [InfoDataRocket] {
-        
-        let formatterDate = DateFormatter()
-        let timestamp = "0000-00-00"
-        formatterDate.dateFormat = "yyyy-MM-dd"
-        let date = formatterDate.date(from: timestamp)
-        formatterDate.dateFormat = "dd MMMM, yyyy"
-        
-        
-        rockets?.enumerated().forEach { index, rocket in
-            
-            infoDataRocket[index].imageRocket = (rocket.flickr_images.randomElement() ?? "none") ?? "none"
-            infoDataRocket[index].idRocket = rocket.id ?? "none"
-            infoDataRocket[index].nameRocket = rocket.name ?? "none"
-            
-            infoDataRocket[index].firstFlightLabel = formatterDate.string(from: date!)
-            infoDataRocket[index].countryLabel = ("\(rocket.country ?? "none")")
-            infoDataRocket[index].costLabel = ("$\((rocket.cost_per_launch ?? 0)/1_000_000 ) млн")
-            
-            infoDataRocket[index].enginesFirstStageLabel = ("\(rocket.first_stage?.engines ?? 0)")
-            infoDataRocket[index].fuelFirstStageLabel = ("\(rocket.first_stage?.fuel_amount_tons ?? 0)")
-            infoDataRocket[index].burnSecFirstStageLabel = ("\(rocket.first_stage?.burn_time_sec ?? 0)")
-            
-            infoDataRocket[index].enginesSecondStageLabel = ("\(rocket.second_stage?.engines ?? 0)")
-            infoDataRocket[index].fuelSecondStageLabel = ("\(rocket.second_stage?.fuel_amount_tons ?? 0)")
-            infoDataRocket[index].burnSecSecondStageLabel = ("\(rocket.second_stage?.burn_time_sec ?? 0)")
-            
-        }
-        return infoDataRocket
-    }
-    
-    func setDescriptionData (rockets: [JsonRocket]?) -> [DescriptionDataRocket] {
-        
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        
-        rockets?.enumerated().forEach { index, rocket in
-            descriptionDataRocket[index].heightRocket = ["height":
-                                                            ["m": (formatter.string(for: (rocket.height?.meters ?? 0 )) ?? "none"),
-                                                             "ft": (formatter.string(for: (rocket.height?.feet ?? 0 )) ?? "none")]]
-            descriptionDataRocket[index].diameterRocket = ["diameter":
-                                                            ["m": (formatter.string(for: (rocket.diameter?.meters ?? 0)) ?? "none"),
-                                                             "ft": (formatter.string(for: (rocket.diameter?.feet ?? 0)) ?? "none")]]
-            descriptionDataRocket[index].massRocket = ["mass":
-                                                        ["kg": (formatter.string(for: (rocket.mass?.kg ?? 0)) ?? "none"),
-                                                         "lb": (formatter.string(for: (rocket.mass?.lb ?? 0)) ?? "none")]]
-            descriptionDataRocket[index].payloadRocket = ["payloadWeights":
-                                                            ["kg": (formatter.string(for: (rocket.payload_weights.first ?? 0)) ?? "none"),
-                                                             "lb": (formatter.string(for: (rocket.payload_weights.last ?? 0)) ?? "none")]]
-        }
-        return descriptionDataRocket
-    }
-    
-    func formated () {
-        
-    }
-    
-    
+struct DescriptionDataRocket {
+    var heightRocket: [String: [String: String]]
+    var diameterRocket: [String: [String: String]]
+    var massRocket: [String: [String: String]]
+    var payloadRocket: [String: [String: String]]
 }
+
+struct InfoDataRocket {
+    var imageRocket: String
+    var idRocket: String
+    var nameRocket: String
+    
+    var firstFlightLabel: String
+    var countryLabel: String
+    var costLabel: String
+    
+    var enginesFirstStageLabel: String
+    var fuelFirstStageLabel: String
+    var burnSecFirstStageLabel: String
+    
+    var enginesSecondStageLabel: String
+    var fuelSecondStageLabel: String
+    var burnSecSecondStageLabel: String
+}
+
+//final class DataRocketModel {
+//    
+//    var descriptionDataRocket = [DescriptionDataRocket]()
+//    var infoDataRocket = [InfoDataRocket]()
+//    
+//    func setInfoData (rockets: [JsonRocket]?) -> [InfoDataRocket] {
+//        
+//        let formatterDate = DateFormatter()
+//        let timestamp = "0000-00-00"
+//        formatterDate.dateFormat = "yyyy-MM-dd"
+//        let date = formatterDate.date(from: timestamp)
+//        formatterDate.dateFormat = "dd MMMM, yyyy"
+//        
+//        
+//        rockets?.enumerated().forEach { index, rocket in
+//            
+//            infoDataRocket[index].imageRocket = (rocket.flickr_images.randomElement() ?? "none") ?? "none"
+//            infoDataRocket[index].idRocket = rocket.id ?? "none"
+//            infoDataRocket[index].nameRocket = rocket.name ?? "none"
+//            
+//            infoDataRocket[index].firstFlightLabel = formatterDate.string(from: date!)
+//            infoDataRocket[index].countryLabel = ("\(rocket.country ?? "none")")
+//            infoDataRocket[index].costLabel = ("$\((rocket.cost_per_launch ?? 0)/1_000_000 ) млн")
+//            
+//            infoDataRocket[index].enginesFirstStageLabel = ("\(rocket.first_stage?.engines ?? 0)")
+//            infoDataRocket[index].fuelFirstStageLabel = ("\(rocket.first_stage?.fuel_amount_tons ?? 0)")
+//            infoDataRocket[index].burnSecFirstStageLabel = ("\(rocket.first_stage?.burn_time_sec ?? 0)")
+//            
+//            infoDataRocket[index].enginesSecondStageLabel = ("\(rocket.second_stage?.engines ?? 0)")
+//            infoDataRocket[index].fuelSecondStageLabel = ("\(rocket.second_stage?.fuel_amount_tons ?? 0)")
+//            infoDataRocket[index].burnSecSecondStageLabel = ("\(rocket.second_stage?.burn_time_sec ?? 0)")
+//            
+//        }
+//        return infoDataRocket
+//    }
+//    
+//    func setDescriptionData (rockets: [JsonRocket]?) -> [DescriptionDataRocket] {
+//        
+//        let formatter = NumberFormatter()
+//        formatter.numberStyle = .decimal
+//        
+//        rockets?.enumerated().forEach { index, rocket in
+//            descriptionDataRocket[index].heightRocket = ["height":
+//                                                            ["m": (formatter.string(for: (rocket.height?.meters ?? 0 )) ?? "none"),
+//                                                             "ft": (formatter.string(for: (rocket.height?.feet ?? 0 )) ?? "none")]]
+//            descriptionDataRocket[index].diameterRocket = ["diameter":
+//                                                            ["m": (formatter.string(for: (rocket.diameter?.meters ?? 0)) ?? "none"),
+//                                                             "ft": (formatter.string(for: (rocket.diameter?.feet ?? 0)) ?? "none")]]
+//            descriptionDataRocket[index].massRocket = ["mass":
+//                                                        ["kg": (formatter.string(for: (rocket.mass?.kg ?? 0)) ?? "none"),
+//                                                         "lb": (formatter.string(for: (rocket.mass?.lb ?? 0)) ?? "none")]]
+//            descriptionDataRocket[index].payloadRocket = ["payloadWeights":
+//                                                            ["kg": (formatter.string(for: (rocket.payload_weights.first ?? 0)) ?? "none"),
+//                                                             "lb": (formatter.string(for: (rocket.payload_weights.last ?? 0)) ?? "none")]]
+//        }
+//        return descriptionDataRocket
+//    }
+//    
+//    func formated () {
+//        
+//    }
+//    
+//    
+//}
 
 
 
