@@ -27,7 +27,7 @@ Swift
 # Технологии, API/Frameworks, ПО
  - UIKit, Storyboard, Autolayout, Interface Builder, Xib, UserDefaults;    
  - OOP, POP, DRY, SOLID, MVP;  
- - нативный API, JSON, REST;  
+ - URLSession, JSON, REST;  
  - Fork, GIT, GitHub; 
  - Figma, Postman, Символы SF.
 
